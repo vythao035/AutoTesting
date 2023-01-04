@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.9.11 on win32)" generated="20230104 23:03:30.671" rpa="false" schemaversion="3">
+<suite id="s1" name="Test Operator" source="C:\Users\Working Space\AutoTesting\Robot Framework\test_operator.robot">
+<test id="s1-t1" name="TC002-operator testing" line="2">
+<kw name="Set Variable" library="BuiltIn">
+<var>${a}</var>
+<arg>${5}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230104 23:03:30.722" level="INFO">${a} = 5</msg>
+<status status="PASS" starttime="20230104 23:03:30.721" endtime="20230104 23:03:30.722"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${b}</var>
+<arg>${4}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230104 23:03:30.722" level="INFO">${b} = 4</msg>
+<status status="PASS" starttime="20230104 23:03:30.722" endtime="20230104 23:03:30.722"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${tong}</var>
+<arg>${a}+${b}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230104 23:03:30.722" level="INFO">${tong} = 9</msg>
+<status status="PASS" starttime="20230104 23:03:30.722" endtime="20230104 23:03:30.722"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Tổng hai số nguyên: ${a}+${b} là ${tong}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230104 23:03:30.722" endtime="20230104 23:03:30.731"/>
+</kw>
+<status status="PASS" starttime="20230104 23:03:30.721" endtime="20230104 23:03:30.732"/>
+</test>
+<status status="PASS" starttime="20230104 23:03:30.678" endtime="20230104 23:03:30.732"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test Operator">Test Operator</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
