@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.9.11 on win32)" generated="20230105 23:04:17.568" rpa="false" schemaversion="3">
+<suite id="s1" name="Test Api Login" source="C:\Users\Working Space\AutoTesting\Robot Framework\API testing\test_api_login\test_api_login">
+<test id="s1-t1" name="Login Request Test" line="9">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>LoginSession</arg>
+<arg>${Server}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20230105 23:04:17.686" level="INFO">Creating Session using : alias=LoginSession, url=http://171.244.173.203/xsign-admin/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20230105 23:04:17.686" endtime="20230105 23:04:17.686"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${data}</var>
+<arg>username=hni_manager</arg>
+<arg>password=Xsign@HNI2021</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230105 23:04:17.686" level="INFO">${data} = {'username': 'hni_manager', 'password': 'Xsign@HNI2021'}</msg>
+<status status="PASS" starttime="20230105 23:04:17.686" endtime="20230105 23:04:17.686"/>
+</kw>
+<kw name="POST On Session" library="RequestsLibrary">
+<var>${response}</var>
+<arg>LoginSession</arg>
+<arg>/login</arg>
+<arg>${data}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<msg timestamp="20230105 23:04:17.702" level="INFO">POST Request : url=http://171.244.173.203/xsign-admin/login 
+ path_url=/xsign-admin/login 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '45', 'Content-Type': 'application/x-www-form-urlencoded'} 
+ body=username=hni_manager&amp;password=Xsign%40HNI2021 
+ </msg>
+<msg timestamp="20230105 23:04:17.702" level="INFO">POST Response : url=http://171.244.173.203/xsign-admin/login 
+ status=405, reason=Not Allowed 
+ headers={'Date': 'Thu, 05 Jan 2023 16:04:19 GMT', 'Content-Type': 'text/html', 'Content-Length': '157', 'Connection': 'keep-alive'} 
+ body=&lt;html&gt;
+&lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
+&lt;hr&gt;&lt;center&gt;nginx/1.20.2&lt;/center&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+ 
+ </msg>
+<msg timestamp="20230105 23:04:17.702" level="FAIL">HTTPError: 405 Client Error: Not Allowed for url: http://171.244.173.203/xsign-admin/login</msg>
+<status status="FAIL" starttime="20230105 23:04:17.686" endtime="20230105 23:04:17.702"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230105 23:04:17.702" endtime="20230105 23:04:17.702"/>
+</kw>
+<status status="FAIL" starttime="20230105 23:04:17.686" endtime="20230105 23:04:17.702">HTTPError: 405 Client Error: Not Allowed for url: http://171.244.173.203/xsign-admin/login</status>
+</test>
+<status status="FAIL" starttime="20230105 23:04:17.568" endtime="20230105 23:04:17.702"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test Api Login">Test Api Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
