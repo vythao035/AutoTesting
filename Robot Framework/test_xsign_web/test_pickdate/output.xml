@@ -1,0 +1,2856 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.9.12 on linux)" generated="20230105 19:40:10.550" rpa="false" schemaversion="3">
+<suite id="s1" name="Test Pickdate" source="/home/vtn-thaontv/PycharmProjects/AutoTesting/Robot Framework/test_xsign_web/test_pickdate/test_pickdate.robot">
+<test id="s1-t1" name="Manipulate Current Time test" line="11">
+<kw name="Login To WebSite" library="resource" type="SETUP">
+<kw name="Open Browser To Login Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL} ${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230105 19:40:10.645" level="INFO">Opening browser 'firefox' to base url 'http://171.244.173.203/xsign-admin/login Firefox'.</msg>
+<msg timestamp="20230105 19:40:10.645" level="INFO">Firefox driver log is always forced to to: /home/vtn-thaontv/PycharmProjects/AutoTesting/Robot Framework/test_xsign_web/test_pickdate/geckodriver-1.log</msg>
+<status status="PASS" starttime="20230105 19:40:10.645" endtime="20230105 19:40:13.227"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230105 19:40:13.227" endtime="20230105 19:40:13.497"/>
+</kw>
+<status status="PASS" starttime="20230105 19:40:10.645" endtime="20230105 19:40:13.497"/>
+</kw>
+<kw name="Input Username" library="resource">
+<arg>${VALID USER}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:basic_username</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:13.499" level="INFO">Typing text 'hni_manager' into text field 'id:basic_username'.</msg>
+<status status="PASS" starttime="20230105 19:40:13.498" endtime="20230105 19:40:13.591"/>
+</kw>
+<status status="PASS" starttime="20230105 19:40:13.498" endtime="20230105 19:40:13.591"/>
+</kw>
+<kw name="Input Password" library="resource">
+<arg>${VALID PASSWORD}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:basic_password</arg>
+<arg>${pwd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:13.592" level="INFO">Typing text 'Xsign@HNI2021' into text field 'id:basic_password'.</msg>
+<status status="PASS" starttime="20230105 19:40:13.591" endtime="20230105 19:40:13.638"/>
+</kw>
+<status status="PASS" starttime="20230105 19:40:13.591" endtime="20230105 19:40:13.638"/>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Đăng nhập</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:13.638" level="INFO">Clicking button 'Đăng nhập'.</msg>
+<status status="PASS" starttime="20230105 19:40:13.638" endtime="20230105 19:40:13.869"/>
+</kw>
+<status status="PASS" starttime="20230105 19:40:13.638" endtime="20230105 19:40:13.869"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
+<arg>id:basic_username</arg>
+<doc>Waits until the element ``locator`` disappears from the current page.</doc>
+<status status="PASS" starttime="20230105 19:40:13.869" endtime="20230105 19:40:14.024"/>
+</kw>
+<status status="PASS" starttime="20230105 19:40:10.644" endtime="20230105 19:40:14.025"/>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<var>${current_date}</var>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20230105 19:40:14.025" level="INFO">${current_date} = 2023-01-05 19:40:14.025</msg>
+<status status="PASS" starttime="20230105 19:40:14.025" endtime="20230105 19:40:14.025"/>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<var>${current_datetime}</var>
+<arg>${current_date}</arg>
+<arg>datetime</arg>
+<doc>Converts between supported `date formats`.</doc>
+<msg timestamp="20230105 19:40:14.027" level="INFO">${current_datetime} = 2023-01-05 19:40:14.025000</msg>
+<status status="PASS" starttime="20230105 19:40:14.025" endtime="20230105 19:40:14.027"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${current_datetime}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:14.027" endtime="20230105 19:40:14.028"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${current_datetime.year}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:14.028" endtime="20230105 19:40:14.029"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${current_datetime.month}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:14.029" endtime="20230105 19:40:14.029"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${current_datetime.day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:14.029" endtime="20230105 19:40:14.030"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230105 19:40:14.030" endtime="20230105 19:40:14.813"/>
+</kw>
+<status status="PASS" starttime="20230105 19:40:10.644" endtime="20230105 19:40:14.813"/>
+</test>
+<test id="s1-t2" name="Pick Start/End Date" line="21">
+<kw name="Login To WebSite" library="resource" type="SETUP">
+<kw name="Open Browser To Login Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL} ${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230105 19:40:14.814" level="INFO">Opening browser 'firefox' to base url 'http://171.244.173.203/xsign-admin/login Firefox'.</msg>
+<msg timestamp="20230105 19:40:14.814" level="INFO">Firefox driver log is always forced to to: /home/vtn-thaontv/PycharmProjects/AutoTesting/Robot Framework/test_xsign_web/test_pickdate/geckodriver-2.log</msg>
+<status status="PASS" starttime="20230105 19:40:14.814" endtime="20230105 19:40:17.620"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230105 19:40:17.620" endtime="20230105 19:40:17.882"/>
+</kw>
+<status status="PASS" starttime="20230105 19:40:14.814" endtime="20230105 19:40:17.882"/>
+</kw>
+<kw name="Input Username" library="resource">
+<arg>${VALID USER}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:basic_username</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:17.884" level="INFO">Typing text 'hni_manager' into text field 'id:basic_username'.</msg>
+<status status="PASS" starttime="20230105 19:40:17.883" endtime="20230105 19:40:17.990"/>
+</kw>
+<status status="PASS" starttime="20230105 19:40:17.883" endtime="20230105 19:40:17.991"/>
+</kw>
+<kw name="Input Password" library="resource">
+<arg>${VALID PASSWORD}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:basic_password</arg>
+<arg>${pwd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:17.991" level="INFO">Typing text 'Xsign@HNI2021' into text field 'id:basic_password'.</msg>
+<status status="PASS" starttime="20230105 19:40:17.991" endtime="20230105 19:40:18.041"/>
+</kw>
+<status status="PASS" starttime="20230105 19:40:17.991" endtime="20230105 19:40:18.041"/>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Đăng nhập</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:18.041" level="INFO">Clicking button 'Đăng nhập'.</msg>
+<status status="PASS" starttime="20230105 19:40:18.041" endtime="20230105 19:40:18.270"/>
+</kw>
+<status status="PASS" starttime="20230105 19:40:18.041" endtime="20230105 19:40:18.270"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
+<arg>id:basic_username</arg>
+<doc>Waits until the element ``locator`` disappears from the current page.</doc>
+<status status="PASS" starttime="20230105 19:40:18.270" endtime="20230105 19:40:18.494"/>
+</kw>
+<status status="PASS" starttime="20230105 19:40:14.813" endtime="20230105 19:40:18.494"/>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<var>${start_datetime}</var>
+<arg>${START DATE}</arg>
+<arg>datetime</arg>
+<doc>Converts between supported `date formats`.</doc>
+<msg timestamp="20230105 19:40:18.496" level="INFO">${start_datetime} = 2021-12-12 00:00:00</msg>
+<status status="PASS" starttime="20230105 19:40:18.495" endtime="20230105 19:40:18.496"/>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<var>${end_datetime}</var>
+<arg>${END DATE}</arg>
+<arg>datetime</arg>
+<doc>Converts between supported `date formats`.</doc>
+<msg timestamp="20230105 19:40:18.497" level="INFO">${end_datetime} = 2021-12-24 00:00:00</msg>
+<status status="PASS" starttime="20230105 19:40:18.497" endtime="20230105 19:40:18.497"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${MONTHS}</var>
+<arg>Jan=1</arg>
+<arg>Feb=2</arg>
+<arg>Mar=3</arg>
+<arg>Apr=4</arg>
+<arg>May=5</arg>
+<arg>Jun=6</arg>
+<arg>Jul=7</arg>
+<arg>Aug=8</arg>
+<arg>Sep=9</arg>
+<arg>Oct=10</arg>
+<arg>Nov=11</arg>
+<arg>Dec=12</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230105 19:40:18.499" level="INFO">${MONTHS} = {'Jan': '1', 'Feb': '2', 'Mar': '3', 'Apr': '4', 'May': '5', 'Jun': '6', 'Jul': '7', 'Aug': '8', 'Sep': '9', 'Oct': '10', 'Nov': '11', 'Dec': '12'}</msg>
+<status status="PASS" starttime="20230105 19:40:18.498" endtime="20230105 19:40:18.499"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/div/div/section/div/div/div[1]/div/div[1]/div/div[1]/div/span[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:18.501" level="INFO">Clicking element 'xpath:/html/body/div/div/section/div/div/div[1]/div/div[1]/div/div[1]/div/span[2]'.</msg>
+<status status="PASS" starttime="20230105 19:40:18.500" endtime="20230105 19:40:19.285"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="sideBar-date-picker"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:19.286" level="INFO">Clicking element 'xpath://*[@id="sideBar-date-picker"]'.</msg>
+<status status="PASS" starttime="20230105 19:40:19.286" endtime="20230105 19:40:19.566"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230105 19:40:20.567" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230105 19:40:19.567" endtime="20230105 19:40:20.567"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:div.ant-picker-panel:nth-child(1) &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; div:nth-child(3) &gt; button:nth-child(2)</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:20.568" level="INFO">Clicking element 'css:div.ant-picker-panel:nth-child(1) &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; div:nth-child(3) &gt; button:nth-child(2)'.</msg>
+<status status="PASS" starttime="20230105 19:40:20.568" endtime="20230105 19:40:20.783"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>@{list_years}</var>
+<arg>xpath:/html/body/div[2]/div/div/div/div[2]/div/div[1]/div/div[2]/table/tbody/tr/td</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20230105 19:40:20.787" level="INFO">@{list_years} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="e78af971-0720-40c9-9b5b-7a39c6897baa")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement ...</msg>
+<status status="PASS" starttime="20230105 19:40:20.784" endtime="20230105 19:40:20.787"/>
+</kw>
+<for flavor="IN">
+<var>${i}</var>
+<value>@{list_years}</value>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="e78af971-0720-40c9-9b5b-7a39c6897baa")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${year}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:20.798" level="INFO">${year} = 2019</msg>
+<status status="PASS" starttime="20230105 19:40:20.787" endtime="20230105 19:40:20.798"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${year}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:20.798" endtime="20230105 19:40:20.799"/>
+</kw>
+<if>
+<branch type="IF" condition="${year} == ${start_datetime.year}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:20.800" endtime="20230105 19:40:20.800"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:20.800" endtime="20230105 19:40:20.800"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:20.800" endtime="20230105 19:40:20.800"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:20.799" endtime="20230105 19:40:20.800"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:20.787" endtime="20230105 19:40:20.800"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="8dc5ba45-3abc-4faf-8583-dbf40d714b12")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${year}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:20.804" level="INFO">${year} = 2020</msg>
+<status status="PASS" starttime="20230105 19:40:20.800" endtime="20230105 19:40:20.804"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${year}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:20.805" endtime="20230105 19:40:20.805"/>
+</kw>
+<if>
+<branch type="IF" condition="${year} == ${start_datetime.year}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:20.805" endtime="20230105 19:40:20.805"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:20.805" endtime="20230105 19:40:20.805"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:20.805" endtime="20230105 19:40:20.805"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:20.805" endtime="20230105 19:40:20.805"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:20.800" endtime="20230105 19:40:20.805"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="8124aec8-a490-4b8e-be07-c1b0fb2bc4b5")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${year}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:20.809" level="INFO">${year} = 2021</msg>
+<status status="PASS" starttime="20230105 19:40:20.805" endtime="20230105 19:40:20.809"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${year}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:20.809" endtime="20230105 19:40:20.809"/>
+</kw>
+<if>
+<branch type="IF" condition="${year} == ${start_datetime.year}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:20.810" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="8124aec8-a490-4b8e-be07-c1b0fb2bc4b5")&gt;'.</msg>
+<status status="PASS" starttime="20230105 19:40:20.810" endtime="20230105 19:40:21.051"/>
+</kw>
+<break>
+<status status="PASS" starttime="20230105 19:40:21.051" endtime="20230105 19:40:21.051"/>
+</break>
+<status status="PASS" starttime="20230105 19:40:20.809" endtime="20230105 19:40:21.051"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:20.809" endtime="20230105 19:40:21.051"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:20.805" endtime="20230105 19:40:21.051"/>
+</iter>
+<status status="PASS" starttime="20230105 19:40:20.787" endtime="20230105 19:40:21.051"/>
+</for>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:div.ant-picker-panel:nth-child(1) &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; div:nth-child(3) &gt; button:nth-child(1)</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.051" level="INFO">Clicking element 'css:div.ant-picker-panel:nth-child(1) &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; div:nth-child(3) &gt; button:nth-child(1)'.</msg>
+<status status="PASS" starttime="20230105 19:40:21.051" endtime="20230105 19:40:21.266"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>@{list_months}</var>
+<arg>xpath:/html/body/div[2]/div/div/div/div[2]/div/div/div/div[2]/table/tbody/tr/td</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.269" level="INFO">@{list_months} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="f6e862a4-d61d-493b-bfbd-acd7292e7285")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement ...</msg>
+<status status="PASS" starttime="20230105 19:40:21.266" endtime="20230105 19:40:21.269"/>
+</kw>
+<for flavor="IN">
+<var>${i}</var>
+<value>@{list_months}</value>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="f6e862a4-d61d-493b-bfbd-acd7292e7285")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${month}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.273" level="INFO">${month} = Jan</msg>
+<status status="PASS" starttime="20230105 19:40:21.270" endtime="20230105 19:40:21.273"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.274" endtime="20230105 19:40:21.274"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${month_in_num}</var>
+<arg>${MONTHS}</arg>
+<arg>${month}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20230105 19:40:21.274" level="INFO">${month_in_num} = 1</msg>
+<status status="PASS" starttime="20230105 19:40:21.274" endtime="20230105 19:40:21.274"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month_in_num}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.274" endtime="20230105 19:40:21.274"/>
+</kw>
+<if>
+<branch type="IF" condition="${month_in_num} == ${start_datetime.month}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:21.275" endtime="20230105 19:40:21.275"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:21.275" endtime="20230105 19:40:21.275"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:21.275" endtime="20230105 19:40:21.275"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:21.274" endtime="20230105 19:40:21.275"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:21.270" endtime="20230105 19:40:21.275"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="a1cad3ee-ac0e-45b2-bf8c-70eb332adb09")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${month}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.278" level="INFO">${month} = Feb</msg>
+<status status="PASS" starttime="20230105 19:40:21.275" endtime="20230105 19:40:21.278"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.278" endtime="20230105 19:40:21.279"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${month_in_num}</var>
+<arg>${MONTHS}</arg>
+<arg>${month}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20230105 19:40:21.279" level="INFO">${month_in_num} = 2</msg>
+<status status="PASS" starttime="20230105 19:40:21.279" endtime="20230105 19:40:21.279"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month_in_num}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.279" endtime="20230105 19:40:21.279"/>
+</kw>
+<if>
+<branch type="IF" condition="${month_in_num} == ${start_datetime.month}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:21.280" endtime="20230105 19:40:21.280"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:21.280" endtime="20230105 19:40:21.280"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:21.280" endtime="20230105 19:40:21.280"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:21.279" endtime="20230105 19:40:21.280"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:21.275" endtime="20230105 19:40:21.280"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="e3d017ac-8deb-4a65-9eb9-c9d577dc2bd3")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${month}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.283" level="INFO">${month} = Mar</msg>
+<status status="PASS" starttime="20230105 19:40:21.280" endtime="20230105 19:40:21.283"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.283" endtime="20230105 19:40:21.283"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${month_in_num}</var>
+<arg>${MONTHS}</arg>
+<arg>${month}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20230105 19:40:21.284" level="INFO">${month_in_num} = 3</msg>
+<status status="PASS" starttime="20230105 19:40:21.283" endtime="20230105 19:40:21.284"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month_in_num}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.284" endtime="20230105 19:40:21.284"/>
+</kw>
+<if>
+<branch type="IF" condition="${month_in_num} == ${start_datetime.month}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:21.284" endtime="20230105 19:40:21.284"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:21.284" endtime="20230105 19:40:21.284"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:21.284" endtime="20230105 19:40:21.284"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:21.284" endtime="20230105 19:40:21.284"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:21.280" endtime="20230105 19:40:21.284"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="7738f54d-149b-414c-8276-b9ec68b96cbb")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${month}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.288" level="INFO">${month} = Apr</msg>
+<status status="PASS" starttime="20230105 19:40:21.284" endtime="20230105 19:40:21.288"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.288" endtime="20230105 19:40:21.288"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${month_in_num}</var>
+<arg>${MONTHS}</arg>
+<arg>${month}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20230105 19:40:21.288" level="INFO">${month_in_num} = 4</msg>
+<status status="PASS" starttime="20230105 19:40:21.288" endtime="20230105 19:40:21.288"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month_in_num}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.288" endtime="20230105 19:40:21.288"/>
+</kw>
+<if>
+<branch type="IF" condition="${month_in_num} == ${start_datetime.month}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:21.289" endtime="20230105 19:40:21.289"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:21.289" endtime="20230105 19:40:21.289"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:21.289" endtime="20230105 19:40:21.289"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:21.288" endtime="20230105 19:40:21.289"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:21.284" endtime="20230105 19:40:21.289"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="7c84135f-7b1a-481a-a64c-068b7ba0f77f")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${month}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.292" level="INFO">${month} = May</msg>
+<status status="PASS" starttime="20230105 19:40:21.289" endtime="20230105 19:40:21.292"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.292" endtime="20230105 19:40:21.292"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${month_in_num}</var>
+<arg>${MONTHS}</arg>
+<arg>${month}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20230105 19:40:21.293" level="INFO">${month_in_num} = 5</msg>
+<status status="PASS" starttime="20230105 19:40:21.292" endtime="20230105 19:40:21.293"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month_in_num}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.293" endtime="20230105 19:40:21.293"/>
+</kw>
+<if>
+<branch type="IF" condition="${month_in_num} == ${start_datetime.month}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:21.293" endtime="20230105 19:40:21.293"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:21.293" endtime="20230105 19:40:21.293"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:21.293" endtime="20230105 19:40:21.293"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:21.293" endtime="20230105 19:40:21.293"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:21.289" endtime="20230105 19:40:21.293"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="2b0271bf-6ce6-4702-9ff4-6d1db4ee23a7")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${month}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.297" level="INFO">${month} = Jun</msg>
+<status status="PASS" starttime="20230105 19:40:21.293" endtime="20230105 19:40:21.297"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.297" endtime="20230105 19:40:21.297"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${month_in_num}</var>
+<arg>${MONTHS}</arg>
+<arg>${month}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20230105 19:40:21.297" level="INFO">${month_in_num} = 6</msg>
+<status status="PASS" starttime="20230105 19:40:21.297" endtime="20230105 19:40:21.297"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month_in_num}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.298" endtime="20230105 19:40:21.298"/>
+</kw>
+<if>
+<branch type="IF" condition="${month_in_num} == ${start_datetime.month}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:21.298" endtime="20230105 19:40:21.298"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:21.298" endtime="20230105 19:40:21.298"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:21.298" endtime="20230105 19:40:21.298"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:21.298" endtime="20230105 19:40:21.298"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:21.293" endtime="20230105 19:40:21.298"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="05e17506-afbf-40b2-afee-2b935b5a2265")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${month}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.302" level="INFO">${month} = Jul</msg>
+<status status="PASS" starttime="20230105 19:40:21.298" endtime="20230105 19:40:21.302"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.302" endtime="20230105 19:40:21.302"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${month_in_num}</var>
+<arg>${MONTHS}</arg>
+<arg>${month}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20230105 19:40:21.302" level="INFO">${month_in_num} = 7</msg>
+<status status="PASS" starttime="20230105 19:40:21.302" endtime="20230105 19:40:21.302"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month_in_num}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.302" endtime="20230105 19:40:21.302"/>
+</kw>
+<if>
+<branch type="IF" condition="${month_in_num} == ${start_datetime.month}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:21.303" endtime="20230105 19:40:21.303"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:21.303" endtime="20230105 19:40:21.303"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:21.303" endtime="20230105 19:40:21.303"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:21.302" endtime="20230105 19:40:21.303"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:21.298" endtime="20230105 19:40:21.303"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="2af34db5-14be-400a-83df-6b2426984962")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${month}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.307" level="INFO">${month} = Aug</msg>
+<status status="PASS" starttime="20230105 19:40:21.303" endtime="20230105 19:40:21.307"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.307" endtime="20230105 19:40:21.307"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${month_in_num}</var>
+<arg>${MONTHS}</arg>
+<arg>${month}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20230105 19:40:21.307" level="INFO">${month_in_num} = 8</msg>
+<status status="PASS" starttime="20230105 19:40:21.307" endtime="20230105 19:40:21.307"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month_in_num}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.307" endtime="20230105 19:40:21.307"/>
+</kw>
+<if>
+<branch type="IF" condition="${month_in_num} == ${start_datetime.month}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:21.308" endtime="20230105 19:40:21.308"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:21.308" endtime="20230105 19:40:21.308"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:21.308" endtime="20230105 19:40:21.308"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:21.307" endtime="20230105 19:40:21.308"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:21.303" endtime="20230105 19:40:21.308"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="a7eac69d-47c2-4c17-93e2-3eac15c06e53")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${month}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.311" level="INFO">${month} = Sep</msg>
+<status status="PASS" starttime="20230105 19:40:21.308" endtime="20230105 19:40:21.311"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.311" endtime="20230105 19:40:21.311"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${month_in_num}</var>
+<arg>${MONTHS}</arg>
+<arg>${month}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20230105 19:40:21.312" level="INFO">${month_in_num} = 9</msg>
+<status status="PASS" starttime="20230105 19:40:21.311" endtime="20230105 19:40:21.312"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month_in_num}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.312" endtime="20230105 19:40:21.312"/>
+</kw>
+<if>
+<branch type="IF" condition="${month_in_num} == ${start_datetime.month}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:21.312" endtime="20230105 19:40:21.312"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:21.312" endtime="20230105 19:40:21.312"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:21.312" endtime="20230105 19:40:21.312"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:21.312" endtime="20230105 19:40:21.312"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:21.308" endtime="20230105 19:40:21.312"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="51c5416d-8adb-4e04-a958-61fd3e713a25")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${month}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.316" level="INFO">${month} = Oct</msg>
+<status status="PASS" starttime="20230105 19:40:21.312" endtime="20230105 19:40:21.316"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.316" endtime="20230105 19:40:21.316"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${month_in_num}</var>
+<arg>${MONTHS}</arg>
+<arg>${month}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20230105 19:40:21.316" level="INFO">${month_in_num} = 10</msg>
+<status status="PASS" starttime="20230105 19:40:21.316" endtime="20230105 19:40:21.316"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month_in_num}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.316" endtime="20230105 19:40:21.316"/>
+</kw>
+<if>
+<branch type="IF" condition="${month_in_num} == ${start_datetime.month}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:21.317" endtime="20230105 19:40:21.317"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:21.317" endtime="20230105 19:40:21.317"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:21.317" endtime="20230105 19:40:21.317"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:21.316" endtime="20230105 19:40:21.317"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:21.312" endtime="20230105 19:40:21.317"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="ab3ceb01-499f-460f-9b88-98e78d4518b6")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${month}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.320" level="INFO">${month} = Nov</msg>
+<status status="PASS" starttime="20230105 19:40:21.317" endtime="20230105 19:40:21.320"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.320" endtime="20230105 19:40:21.320"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${month_in_num}</var>
+<arg>${MONTHS}</arg>
+<arg>${month}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20230105 19:40:21.320" level="INFO">${month_in_num} = 11</msg>
+<status status="PASS" starttime="20230105 19:40:21.320" endtime="20230105 19:40:21.320"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month_in_num}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.320" endtime="20230105 19:40:21.321"/>
+</kw>
+<if>
+<branch type="IF" condition="${month_in_num} == ${start_datetime.month}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:21.321" endtime="20230105 19:40:21.321"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:21.321" endtime="20230105 19:40:21.321"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:21.321" endtime="20230105 19:40:21.321"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:21.321" endtime="20230105 19:40:21.321"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:21.317" endtime="20230105 19:40:21.321"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="fe1feca7-24da-4265-a212-2a3bb4c8b853")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${month}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.324" level="INFO">${month} = Dec</msg>
+<status status="PASS" starttime="20230105 19:40:21.321" endtime="20230105 19:40:21.324"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.324" endtime="20230105 19:40:21.325"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${month_in_num}</var>
+<arg>${MONTHS}</arg>
+<arg>${month}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20230105 19:40:21.325" level="INFO">${month_in_num} = 12</msg>
+<status status="PASS" starttime="20230105 19:40:21.325" endtime="20230105 19:40:21.325"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month_in_num}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.325" endtime="20230105 19:40:21.325"/>
+</kw>
+<if>
+<branch type="IF" condition="${month_in_num} == ${start_datetime.month}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.326" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="fe1feca7-24da-4265-a212-2a3bb4c8b853")&gt;'.</msg>
+<status status="PASS" starttime="20230105 19:40:21.325" endtime="20230105 19:40:21.555"/>
+</kw>
+<break>
+<status status="PASS" starttime="20230105 19:40:21.555" endtime="20230105 19:40:21.555"/>
+</break>
+<status status="PASS" starttime="20230105 19:40:21.325" endtime="20230105 19:40:21.555"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:21.325" endtime="20230105 19:40:21.555"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:21.321" endtime="20230105 19:40:21.555"/>
+</iter>
+<status status="PASS" starttime="20230105 19:40:21.269" endtime="20230105 19:40:21.555"/>
+</for>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>@{list_days}</var>
+<arg>xpath:/html/body/div[2]/div/div/div/div[2]/div/div/div/div[2]/table/tbody/tr/td</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.565" level="INFO">@{list_days} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="c503fde3-bf25-4be8-868d-758e6e0ce7e2")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement ...</msg>
+<status status="PASS" starttime="20230105 19:40:21.555" endtime="20230105 19:40:21.565"/>
+</kw>
+<for flavor="IN">
+<var>${i}</var>
+<value>@{list_days}</value>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="c503fde3-bf25-4be8-868d-758e6e0ce7e2")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.569" level="INFO">${day} = 28</msg>
+<status status="PASS" starttime="20230105 19:40:21.565" endtime="20230105 19:40:21.569"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.569" endtime="20230105 19:40:21.569"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${start_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:21.570" endtime="20230105 19:40:21.570"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:21.570" endtime="20230105 19:40:21.570"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:21.569" endtime="20230105 19:40:21.570"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:21.569" endtime="20230105 19:40:21.570"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:21.565" endtime="20230105 19:40:21.570"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="6ac998d9-4c4d-489e-b7a0-c7fc904902f7")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.573" level="INFO">${day} = 29</msg>
+<status status="PASS" starttime="20230105 19:40:21.570" endtime="20230105 19:40:21.573"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.573" endtime="20230105 19:40:21.573"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${start_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:21.574" endtime="20230105 19:40:21.574"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:21.574" endtime="20230105 19:40:21.574"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:21.574" endtime="20230105 19:40:21.574"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:21.573" endtime="20230105 19:40:21.574"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:21.570" endtime="20230105 19:40:21.574"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="377d49cf-5eff-4ed8-987d-4734fd700d08")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.577" level="INFO">${day} = 30</msg>
+<status status="PASS" starttime="20230105 19:40:21.574" endtime="20230105 19:40:21.578"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.578" endtime="20230105 19:40:21.578"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${start_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:21.578" endtime="20230105 19:40:21.578"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:21.578" endtime="20230105 19:40:21.578"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:21.578" endtime="20230105 19:40:21.578"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:21.578" endtime="20230105 19:40:21.578"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:21.574" endtime="20230105 19:40:21.578"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="32abaf35-3acc-4e7c-aa16-ceb967507d5f")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.582" level="INFO">${day} = 1</msg>
+<status status="PASS" starttime="20230105 19:40:21.578" endtime="20230105 19:40:21.582"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.582" endtime="20230105 19:40:21.582"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${start_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:21.583" endtime="20230105 19:40:21.583"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:21.583" endtime="20230105 19:40:21.583"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:21.583" endtime="20230105 19:40:21.583"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:21.582" endtime="20230105 19:40:21.583"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:21.578" endtime="20230105 19:40:21.583"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="9602251f-952e-43bd-8639-0f8d55dfbefa")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.586" level="INFO">${day} = 2</msg>
+<status status="PASS" starttime="20230105 19:40:21.583" endtime="20230105 19:40:21.586"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.586" endtime="20230105 19:40:21.586"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${start_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:21.587" endtime="20230105 19:40:21.587"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:21.587" endtime="20230105 19:40:21.587"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:21.587" endtime="20230105 19:40:21.587"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:21.586" endtime="20230105 19:40:21.587"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:21.583" endtime="20230105 19:40:21.587"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="c17ea3a2-878f-4b32-ac9f-436ddece2672")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.590" level="INFO">${day} = 3</msg>
+<status status="PASS" starttime="20230105 19:40:21.587" endtime="20230105 19:40:21.590"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.590" endtime="20230105 19:40:21.590"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${start_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:21.591" endtime="20230105 19:40:21.591"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:21.591" endtime="20230105 19:40:21.591"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:21.591" endtime="20230105 19:40:21.591"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:21.590" endtime="20230105 19:40:21.591"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:21.587" endtime="20230105 19:40:21.591"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="5b91ad9a-3260-4061-b53d-cf625dee244f")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.594" level="INFO">${day} = 4</msg>
+<status status="PASS" starttime="20230105 19:40:21.591" endtime="20230105 19:40:21.594"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.594" endtime="20230105 19:40:21.594"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${start_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:21.594" endtime="20230105 19:40:21.594"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:21.594" endtime="20230105 19:40:21.594"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:21.594" endtime="20230105 19:40:21.595"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:21.594" endtime="20230105 19:40:21.595"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:21.591" endtime="20230105 19:40:21.595"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="d93b7fb9-6034-43e1-83e9-5013b898285d")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.598" level="INFO">${day} = 5</msg>
+<status status="PASS" starttime="20230105 19:40:21.595" endtime="20230105 19:40:21.598"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.598" endtime="20230105 19:40:21.598"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${start_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:21.598" endtime="20230105 19:40:21.598"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:21.598" endtime="20230105 19:40:21.598"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:21.598" endtime="20230105 19:40:21.598"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:21.598" endtime="20230105 19:40:21.598"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:21.595" endtime="20230105 19:40:21.598"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="375760f5-6872-40d7-891b-b2c0c72c6870")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.602" level="INFO">${day} = 6</msg>
+<status status="PASS" starttime="20230105 19:40:21.598" endtime="20230105 19:40:21.602"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.602" endtime="20230105 19:40:21.602"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${start_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:21.602" endtime="20230105 19:40:21.602"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:21.602" endtime="20230105 19:40:21.602"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:21.602" endtime="20230105 19:40:21.602"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:21.602" endtime="20230105 19:40:21.602"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:21.598" endtime="20230105 19:40:21.602"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="e5e69c0b-6f3f-4e6d-8a5b-3c7884070733")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.605" level="INFO">${day} = 7</msg>
+<status status="PASS" starttime="20230105 19:40:21.602" endtime="20230105 19:40:21.605"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.606" endtime="20230105 19:40:21.606"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${start_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:21.606" endtime="20230105 19:40:21.606"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:21.606" endtime="20230105 19:40:21.606"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:21.606" endtime="20230105 19:40:21.606"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:21.606" endtime="20230105 19:40:21.606"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:21.602" endtime="20230105 19:40:21.606"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="736858a4-a53a-414b-be13-0ecb8e439c40")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.609" level="INFO">${day} = 8</msg>
+<status status="PASS" starttime="20230105 19:40:21.606" endtime="20230105 19:40:21.609"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.609" endtime="20230105 19:40:21.610"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${start_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:21.610" endtime="20230105 19:40:21.610"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:21.610" endtime="20230105 19:40:21.610"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:21.610" endtime="20230105 19:40:21.610"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:21.610" endtime="20230105 19:40:21.610"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:21.606" endtime="20230105 19:40:21.610"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="9b7a3247-834c-45ff-ad9b-d7e71e2c216b")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.613" level="INFO">${day} = 9</msg>
+<status status="PASS" starttime="20230105 19:40:21.610" endtime="20230105 19:40:21.613"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.613" endtime="20230105 19:40:21.613"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${start_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:21.614" endtime="20230105 19:40:21.614"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:21.614" endtime="20230105 19:40:21.614"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:21.614" endtime="20230105 19:40:21.614"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:21.613" endtime="20230105 19:40:21.614"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:21.610" endtime="20230105 19:40:21.614"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="5a90192c-ef1b-4387-947a-fdd0f20d220b")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.617" level="INFO">${day} = 10</msg>
+<status status="PASS" starttime="20230105 19:40:21.614" endtime="20230105 19:40:21.617"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.617" endtime="20230105 19:40:21.617"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${start_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:21.618" endtime="20230105 19:40:21.618"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:21.618" endtime="20230105 19:40:21.618"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:21.618" endtime="20230105 19:40:21.618"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:21.617" endtime="20230105 19:40:21.618"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:21.614" endtime="20230105 19:40:21.618"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="aa02d939-e922-4c2b-a611-eca23f4dc41c")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.621" level="INFO">${day} = 11</msg>
+<status status="PASS" starttime="20230105 19:40:21.618" endtime="20230105 19:40:21.621"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.621" endtime="20230105 19:40:21.621"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${start_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:21.621" endtime="20230105 19:40:21.622"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:21.622" endtime="20230105 19:40:21.622"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:21.621" endtime="20230105 19:40:21.622"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:21.621" endtime="20230105 19:40:21.622"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:21.618" endtime="20230105 19:40:21.622"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="9b8c8a0d-18bc-4a5a-9a87-5fa4cbc4c95e")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.625" level="INFO">${day} = 12</msg>
+<status status="PASS" starttime="20230105 19:40:21.622" endtime="20230105 19:40:21.625"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:21.625" endtime="20230105 19:40:21.625"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${start_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.625" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="9b8c8a0d-18bc-4a5a-9a87-5fa4cbc4c95e")&gt;'.</msg>
+<status status="PASS" starttime="20230105 19:40:21.625" endtime="20230105 19:40:21.883"/>
+</kw>
+<break>
+<status status="PASS" starttime="20230105 19:40:21.884" endtime="20230105 19:40:21.884"/>
+</break>
+<status status="PASS" starttime="20230105 19:40:21.625" endtime="20230105 19:40:21.884"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:21.625" endtime="20230105 19:40:21.884"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:21.622" endtime="20230105 19:40:21.884"/>
+</iter>
+<status status="PASS" starttime="20230105 19:40:21.565" endtime="20230105 19:40:21.884"/>
+</for>
+<kw name="Pick Start DateTime Successful" library="resource">
+<arg>xpath://*[@id="sideBar-date-picker"]</arg>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${start_time_value}</var>
+<arg>${start_time_element}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.893" level="INFO">${start_time_value} = 12/12/2021</msg>
+<status status="PASS" starttime="20230105 19:40:21.884" endtime="20230105 19:40:21.893"/>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<var>${start_datetime}</var>
+<arg>${START DATE}</arg>
+<arg>result_format=%d/%m/%Y</arg>
+<doc>Converts between supported `date formats`.</doc>
+<msg timestamp="20230105 19:40:21.893" level="INFO">${start_datetime} = 12/12/2021</msg>
+<status status="PASS" starttime="20230105 19:40:21.893" endtime="20230105 19:40:21.893"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${start_time_value}</arg>
+<arg>${start_datetime}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230105 19:40:21.893" endtime="20230105 19:40:21.893"/>
+</kw>
+<status status="PASS" starttime="20230105 19:40:21.884" endtime="20230105 19:40:21.893"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div/section/div/div/div[1]/div/div[1]/div/div[1]/div/div[3]/input</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:21.894" level="INFO">Clicking element 'xpath:/html/body/div[1]/div/section/div/div/div[1]/div/div[1]/div/div[1]/div/div[3]/input'.</msg>
+<status status="PASS" starttime="20230105 19:40:21.893" endtime="20230105 19:40:22.112"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230105 19:40:23.112" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230105 19:40:22.112" endtime="20230105 19:40:23.113"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:div.ant-picker-panel:nth-child(2) &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; div:nth-child(3) &gt; button:nth-child(2)</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.115" level="INFO">Clicking element 'css:div.ant-picker-panel:nth-child(2) &gt; div:nth-child(1) &gt; div:nth-child(1) &gt; div:nth-child(3) &gt; button:nth-child(2)'.</msg>
+<status status="PASS" starttime="20230105 19:40:23.114" endtime="20230105 19:40:23.340"/>
+</kw>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>@{list_years}</var>
+<arg>xpath:/html/body/div[2]/div/div/div/div[2]/div/div/div/div[2]/table/tbody/tr/td</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.343" level="INFO">@{list_years} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="256473f4-b26e-42c0-883b-312a3d40a218")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement ...</msg>
+<status status="PASS" starttime="20230105 19:40:23.341" endtime="20230105 19:40:23.343"/>
+</kw>
+<for flavor="IN">
+<var>${i}</var>
+<value>@{list_years}</value>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="256473f4-b26e-42c0-883b-312a3d40a218")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${year}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.349" level="INFO">${year} = 2019</msg>
+<status status="PASS" starttime="20230105 19:40:23.344" endtime="20230105 19:40:23.349"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${year}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.349" endtime="20230105 19:40:23.349"/>
+</kw>
+<if>
+<branch type="IF" condition="${year} == ${end_datetime.year}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.350" endtime="20230105 19:40:23.350"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.350" endtime="20230105 19:40:23.350"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.350" endtime="20230105 19:40:23.350"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.349" endtime="20230105 19:40:23.350"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.344" endtime="20230105 19:40:23.350"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="9e2abd16-9a8e-4893-80e0-009760b3b4de")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${year}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.354" level="INFO">${year} = 2020</msg>
+<status status="PASS" starttime="20230105 19:40:23.350" endtime="20230105 19:40:23.354"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${year}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.354" endtime="20230105 19:40:23.354"/>
+</kw>
+<if>
+<branch type="IF" condition="${year} == ${end_datetime.year}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.355" endtime="20230105 19:40:23.355"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.355" endtime="20230105 19:40:23.355"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.355" endtime="20230105 19:40:23.355"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.354" endtime="20230105 19:40:23.355"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.350" endtime="20230105 19:40:23.355"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="b7ef23b5-3353-4ecd-91f3-283e6c544145")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${year}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.358" level="INFO">${year} = 2021</msg>
+<status status="PASS" starttime="20230105 19:40:23.355" endtime="20230105 19:40:23.358"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${year}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.358" endtime="20230105 19:40:23.358"/>
+</kw>
+<if>
+<branch type="IF" condition="${year} == ${end_datetime.year}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.359" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="b7ef23b5-3353-4ecd-91f3-283e6c544145")&gt;'.</msg>
+<status status="PASS" starttime="20230105 19:40:23.359" endtime="20230105 19:40:23.575"/>
+</kw>
+<break>
+<status status="PASS" starttime="20230105 19:40:23.575" endtime="20230105 19:40:23.575"/>
+</break>
+<status status="PASS" starttime="20230105 19:40:23.359" endtime="20230105 19:40:23.575"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.358" endtime="20230105 19:40:23.575"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.355" endtime="20230105 19:40:23.575"/>
+</iter>
+<status status="PASS" starttime="20230105 19:40:23.343" endtime="20230105 19:40:23.575"/>
+</for>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>@{list_months}</var>
+<arg>xpath:/html/body/div[2]/div/div/div/div[2]/div/div/div/div[2]/table/tbody/tr/td</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.578" level="INFO">@{list_months} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="a6205c62-caeb-4cd3-a5ce-15bb3509f9d9")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement ...</msg>
+<status status="PASS" starttime="20230105 19:40:23.575" endtime="20230105 19:40:23.578"/>
+</kw>
+<for flavor="IN">
+<var>${i}</var>
+<value>@{list_months}</value>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="a6205c62-caeb-4cd3-a5ce-15bb3509f9d9")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${month}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.583" level="INFO">${month} = Jan</msg>
+<status status="PASS" starttime="20230105 19:40:23.578" endtime="20230105 19:40:23.583"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.583" endtime="20230105 19:40:23.584"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${month_in_num}</var>
+<arg>${MONTHS}</arg>
+<arg>${month}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20230105 19:40:23.584" level="INFO">${month_in_num} = 1</msg>
+<status status="PASS" starttime="20230105 19:40:23.584" endtime="20230105 19:40:23.584"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month_in_num}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.584" endtime="20230105 19:40:23.584"/>
+</kw>
+<if>
+<branch type="IF" condition="${month_in_num} == ${end_datetime.month}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.584" endtime="20230105 19:40:23.584"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.585" endtime="20230105 19:40:23.585"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.584" endtime="20230105 19:40:23.585"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.584" endtime="20230105 19:40:23.585"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.578" endtime="20230105 19:40:23.585"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="2f79923c-d859-40bd-a879-314da729a7a7")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${month}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.589" level="INFO">${month} = Feb</msg>
+<status status="PASS" starttime="20230105 19:40:23.585" endtime="20230105 19:40:23.589"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.589" endtime="20230105 19:40:23.589"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${month_in_num}</var>
+<arg>${MONTHS}</arg>
+<arg>${month}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20230105 19:40:23.589" level="INFO">${month_in_num} = 2</msg>
+<status status="PASS" starttime="20230105 19:40:23.589" endtime="20230105 19:40:23.589"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month_in_num}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.589" endtime="20230105 19:40:23.589"/>
+</kw>
+<if>
+<branch type="IF" condition="${month_in_num} == ${end_datetime.month}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.590" endtime="20230105 19:40:23.590"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.590" endtime="20230105 19:40:23.590"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.590" endtime="20230105 19:40:23.590"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.590" endtime="20230105 19:40:23.590"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.585" endtime="20230105 19:40:23.590"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="fbef5f2b-c4e1-4e76-8297-6ffdd983be74")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${month}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.593" level="INFO">${month} = Mar</msg>
+<status status="PASS" starttime="20230105 19:40:23.590" endtime="20230105 19:40:23.593"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.594" endtime="20230105 19:40:23.594"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${month_in_num}</var>
+<arg>${MONTHS}</arg>
+<arg>${month}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20230105 19:40:23.594" level="INFO">${month_in_num} = 3</msg>
+<status status="PASS" starttime="20230105 19:40:23.594" endtime="20230105 19:40:23.594"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month_in_num}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.594" endtime="20230105 19:40:23.594"/>
+</kw>
+<if>
+<branch type="IF" condition="${month_in_num} == ${end_datetime.month}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.595" endtime="20230105 19:40:23.595"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.595" endtime="20230105 19:40:23.595"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.595" endtime="20230105 19:40:23.595"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.594" endtime="20230105 19:40:23.595"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.590" endtime="20230105 19:40:23.595"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="e0dc3a20-3a19-4006-b755-9786bc0ee415")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${month}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.601" level="INFO">${month} = Apr</msg>
+<status status="PASS" starttime="20230105 19:40:23.595" endtime="20230105 19:40:23.601"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.601" endtime="20230105 19:40:23.602"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${month_in_num}</var>
+<arg>${MONTHS}</arg>
+<arg>${month}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20230105 19:40:23.602" level="INFO">${month_in_num} = 4</msg>
+<status status="PASS" starttime="20230105 19:40:23.602" endtime="20230105 19:40:23.602"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month_in_num}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.602" endtime="20230105 19:40:23.602"/>
+</kw>
+<if>
+<branch type="IF" condition="${month_in_num} == ${end_datetime.month}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.603" endtime="20230105 19:40:23.603"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.603" endtime="20230105 19:40:23.603"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.603" endtime="20230105 19:40:23.603"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.602" endtime="20230105 19:40:23.603"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.595" endtime="20230105 19:40:23.603"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="3478ef2b-8393-48cd-80f1-d50e7515feb9")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${month}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.607" level="INFO">${month} = May</msg>
+<status status="PASS" starttime="20230105 19:40:23.603" endtime="20230105 19:40:23.607"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.607" endtime="20230105 19:40:23.607"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${month_in_num}</var>
+<arg>${MONTHS}</arg>
+<arg>${month}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20230105 19:40:23.607" level="INFO">${month_in_num} = 5</msg>
+<status status="PASS" starttime="20230105 19:40:23.607" endtime="20230105 19:40:23.607"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month_in_num}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.607" endtime="20230105 19:40:23.607"/>
+</kw>
+<if>
+<branch type="IF" condition="${month_in_num} == ${end_datetime.month}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.608" endtime="20230105 19:40:23.608"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.608" endtime="20230105 19:40:23.608"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.608" endtime="20230105 19:40:23.608"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.607" endtime="20230105 19:40:23.608"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.603" endtime="20230105 19:40:23.608"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="e02ac4f5-ac15-43d0-9b3b-03fe09d90b47")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${month}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.611" level="INFO">${month} = Jun</msg>
+<status status="PASS" starttime="20230105 19:40:23.608" endtime="20230105 19:40:23.611"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.611" endtime="20230105 19:40:23.611"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${month_in_num}</var>
+<arg>${MONTHS}</arg>
+<arg>${month}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20230105 19:40:23.612" level="INFO">${month_in_num} = 6</msg>
+<status status="PASS" starttime="20230105 19:40:23.612" endtime="20230105 19:40:23.612"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month_in_num}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.612" endtime="20230105 19:40:23.612"/>
+</kw>
+<if>
+<branch type="IF" condition="${month_in_num} == ${end_datetime.month}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.613" endtime="20230105 19:40:23.613"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.613" endtime="20230105 19:40:23.613"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.613" endtime="20230105 19:40:23.613"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.612" endtime="20230105 19:40:23.613"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.608" endtime="20230105 19:40:23.613"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="d937d176-b8e8-4bfb-b9a8-16466a32e39a")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${month}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.619" level="INFO">${month} = Jul</msg>
+<status status="PASS" starttime="20230105 19:40:23.613" endtime="20230105 19:40:23.619"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.619" endtime="20230105 19:40:23.620"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${month_in_num}</var>
+<arg>${MONTHS}</arg>
+<arg>${month}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20230105 19:40:23.620" level="INFO">${month_in_num} = 7</msg>
+<status status="PASS" starttime="20230105 19:40:23.620" endtime="20230105 19:40:23.620"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month_in_num}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.620" endtime="20230105 19:40:23.620"/>
+</kw>
+<if>
+<branch type="IF" condition="${month_in_num} == ${end_datetime.month}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.621" endtime="20230105 19:40:23.621"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.621" endtime="20230105 19:40:23.621"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.621" endtime="20230105 19:40:23.621"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.620" endtime="20230105 19:40:23.621"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.613" endtime="20230105 19:40:23.621"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="0ad870e9-5310-4ce0-a114-e280a38b4963")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${month}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.624" level="INFO">${month} = Aug</msg>
+<status status="PASS" starttime="20230105 19:40:23.621" endtime="20230105 19:40:23.624"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.624" endtime="20230105 19:40:23.624"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${month_in_num}</var>
+<arg>${MONTHS}</arg>
+<arg>${month}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20230105 19:40:23.625" level="INFO">${month_in_num} = 8</msg>
+<status status="PASS" starttime="20230105 19:40:23.625" endtime="20230105 19:40:23.625"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month_in_num}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.625" endtime="20230105 19:40:23.625"/>
+</kw>
+<if>
+<branch type="IF" condition="${month_in_num} == ${end_datetime.month}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.625" endtime="20230105 19:40:23.625"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.625" endtime="20230105 19:40:23.625"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.625" endtime="20230105 19:40:23.625"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.625" endtime="20230105 19:40:23.625"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.621" endtime="20230105 19:40:23.625"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="060d9969-7adf-42ac-b179-c9af8ca6d47a")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${month}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.629" level="INFO">${month} = Sep</msg>
+<status status="PASS" starttime="20230105 19:40:23.626" endtime="20230105 19:40:23.629"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.630" endtime="20230105 19:40:23.630"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${month_in_num}</var>
+<arg>${MONTHS}</arg>
+<arg>${month}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20230105 19:40:23.631" level="INFO">${month_in_num} = 9</msg>
+<status status="PASS" starttime="20230105 19:40:23.630" endtime="20230105 19:40:23.631"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month_in_num}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.631" endtime="20230105 19:40:23.631"/>
+</kw>
+<if>
+<branch type="IF" condition="${month_in_num} == ${end_datetime.month}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.632" endtime="20230105 19:40:23.632"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.632" endtime="20230105 19:40:23.632"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.632" endtime="20230105 19:40:23.632"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.631" endtime="20230105 19:40:23.632"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.626" endtime="20230105 19:40:23.632"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="812ba210-3b3e-48e0-a9bb-a4cd75b3663f")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${month}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.637" level="INFO">${month} = Oct</msg>
+<status status="PASS" starttime="20230105 19:40:23.632" endtime="20230105 19:40:23.637"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.637" endtime="20230105 19:40:23.637"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${month_in_num}</var>
+<arg>${MONTHS}</arg>
+<arg>${month}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20230105 19:40:23.637" level="INFO">${month_in_num} = 10</msg>
+<status status="PASS" starttime="20230105 19:40:23.637" endtime="20230105 19:40:23.637"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month_in_num}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.638" endtime="20230105 19:40:23.638"/>
+</kw>
+<if>
+<branch type="IF" condition="${month_in_num} == ${end_datetime.month}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.638" endtime="20230105 19:40:23.638"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.638" endtime="20230105 19:40:23.638"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.638" endtime="20230105 19:40:23.638"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.638" endtime="20230105 19:40:23.638"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.632" endtime="20230105 19:40:23.638"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="e40bee67-8cba-47ff-a721-74ec2b0e21ec")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${month}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.642" level="INFO">${month} = Nov</msg>
+<status status="PASS" starttime="20230105 19:40:23.638" endtime="20230105 19:40:23.642"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.642" endtime="20230105 19:40:23.642"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${month_in_num}</var>
+<arg>${MONTHS}</arg>
+<arg>${month}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20230105 19:40:23.642" level="INFO">${month_in_num} = 11</msg>
+<status status="PASS" starttime="20230105 19:40:23.642" endtime="20230105 19:40:23.642"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month_in_num}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.642" endtime="20230105 19:40:23.642"/>
+</kw>
+<if>
+<branch type="IF" condition="${month_in_num} == ${end_datetime.month}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.643" endtime="20230105 19:40:23.643"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.643" endtime="20230105 19:40:23.643"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.643" endtime="20230105 19:40:23.643"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.643" endtime="20230105 19:40:23.643"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.638" endtime="20230105 19:40:23.643"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="0fd6cfda-4673-471b-ae9c-20e0c96e3d77")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${month}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.647" level="INFO">${month} = Dec</msg>
+<status status="PASS" starttime="20230105 19:40:23.643" endtime="20230105 19:40:23.647"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.648" endtime="20230105 19:40:23.648"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${month_in_num}</var>
+<arg>${MONTHS}</arg>
+<arg>${month}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20230105 19:40:23.649" level="INFO">${month_in_num} = 12</msg>
+<status status="PASS" starttime="20230105 19:40:23.648" endtime="20230105 19:40:23.649"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${month_in_num}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.649" endtime="20230105 19:40:23.649"/>
+</kw>
+<if>
+<branch type="IF" condition="${month_in_num} == ${end_datetime.month}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.650" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="0fd6cfda-4673-471b-ae9c-20e0c96e3d77")&gt;'.</msg>
+<status status="PASS" starttime="20230105 19:40:23.650" endtime="20230105 19:40:23.882"/>
+</kw>
+<break>
+<status status="PASS" starttime="20230105 19:40:23.882" endtime="20230105 19:40:23.882"/>
+</break>
+<status status="PASS" starttime="20230105 19:40:23.650" endtime="20230105 19:40:23.882"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.649" endtime="20230105 19:40:23.882"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.643" endtime="20230105 19:40:23.882"/>
+</iter>
+<status status="PASS" starttime="20230105 19:40:23.578" endtime="20230105 19:40:23.882"/>
+</for>
+<kw name="Get WebElements" library="SeleniumLibrary">
+<var>@{list_days}</var>
+<arg>xpath:/html/body/div[2]/div/div/div/div[2]/div/div/div/div[2]/table/tbody/tr/td</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.888" level="INFO">@{list_days} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="f731c7a2-a853-483a-9bc7-76a9af2be4ef")&gt; | &lt;selenium.webdriver.remote.webelement.WebElement ...</msg>
+<status status="PASS" starttime="20230105 19:40:23.882" endtime="20230105 19:40:23.888"/>
+</kw>
+<for flavor="IN">
+<var>${i}</var>
+<value>@{list_days}</value>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="f731c7a2-a853-483a-9bc7-76a9af2be4ef")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.892" level="INFO">${day} = 28</msg>
+<status status="PASS" starttime="20230105 19:40:23.888" endtime="20230105 19:40:23.892"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.892" endtime="20230105 19:40:23.892"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${end_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.892" endtime="20230105 19:40:23.892"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.892" endtime="20230105 19:40:23.892"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.892" endtime="20230105 19:40:23.892"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.892" endtime="20230105 19:40:23.892"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.888" endtime="20230105 19:40:23.892"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="1a8c624f-485a-438c-ad25-d15ad3265366")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.895" level="INFO">${day} = 29</msg>
+<status status="PASS" starttime="20230105 19:40:23.892" endtime="20230105 19:40:23.895"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.896" endtime="20230105 19:40:23.896"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${end_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.896" endtime="20230105 19:40:23.896"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.896" endtime="20230105 19:40:23.896"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.896" endtime="20230105 19:40:23.896"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.896" endtime="20230105 19:40:23.896"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.892" endtime="20230105 19:40:23.896"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="f211b4f6-5f4a-4657-8b66-67a658124e19")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.899" level="INFO">${day} = 30</msg>
+<status status="PASS" starttime="20230105 19:40:23.896" endtime="20230105 19:40:23.899"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.899" endtime="20230105 19:40:23.899"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${end_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.900" endtime="20230105 19:40:23.900"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.900" endtime="20230105 19:40:23.900"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.900" endtime="20230105 19:40:23.900"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.900" endtime="20230105 19:40:23.900"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.896" endtime="20230105 19:40:23.900"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="82abfeec-8a3f-493c-b822-8165714dfc66")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.903" level="INFO">${day} = 1</msg>
+<status status="PASS" starttime="20230105 19:40:23.900" endtime="20230105 19:40:23.903"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.903" endtime="20230105 19:40:23.903"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${end_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.904" endtime="20230105 19:40:23.904"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.904" endtime="20230105 19:40:23.904"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.904" endtime="20230105 19:40:23.904"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.903" endtime="20230105 19:40:23.904"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.900" endtime="20230105 19:40:23.904"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="007c7090-c3e1-4944-840d-82986c668f59")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.907" level="INFO">${day} = 2</msg>
+<status status="PASS" starttime="20230105 19:40:23.904" endtime="20230105 19:40:23.907"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.907" endtime="20230105 19:40:23.907"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${end_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.908" endtime="20230105 19:40:23.908"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.908" endtime="20230105 19:40:23.908"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.908" endtime="20230105 19:40:23.908"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.907" endtime="20230105 19:40:23.908"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.904" endtime="20230105 19:40:23.908"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="b296c6f7-bfde-4fa3-b6be-3b01c5f2281c")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.911" level="INFO">${day} = 3</msg>
+<status status="PASS" starttime="20230105 19:40:23.908" endtime="20230105 19:40:23.911"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.911" endtime="20230105 19:40:23.912"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${end_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.912" endtime="20230105 19:40:23.912"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.912" endtime="20230105 19:40:23.912"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.912" endtime="20230105 19:40:23.912"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.912" endtime="20230105 19:40:23.912"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.908" endtime="20230105 19:40:23.912"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="d287bf1e-3801-4345-9d2d-053333039bf4")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.915" level="INFO">${day} = 4</msg>
+<status status="PASS" starttime="20230105 19:40:23.912" endtime="20230105 19:40:23.915"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.916" endtime="20230105 19:40:23.916"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${end_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.916" endtime="20230105 19:40:23.916"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.916" endtime="20230105 19:40:23.916"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.916" endtime="20230105 19:40:23.916"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.916" endtime="20230105 19:40:23.916"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.912" endtime="20230105 19:40:23.916"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="fbef6995-99e9-48f7-95cd-ca4254a787ee")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.919" level="INFO">${day} = 5</msg>
+<status status="PASS" starttime="20230105 19:40:23.916" endtime="20230105 19:40:23.919"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.919" endtime="20230105 19:40:23.920"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${end_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.920" endtime="20230105 19:40:23.920"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.920" endtime="20230105 19:40:23.920"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.920" endtime="20230105 19:40:23.920"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.920" endtime="20230105 19:40:23.920"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.916" endtime="20230105 19:40:23.920"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="10ab6fd6-f62e-40cb-8afd-c6c25699b35c")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.923" level="INFO">${day} = 6</msg>
+<status status="PASS" starttime="20230105 19:40:23.920" endtime="20230105 19:40:23.923"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.923" endtime="20230105 19:40:23.923"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${end_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.924" endtime="20230105 19:40:23.924"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.924" endtime="20230105 19:40:23.924"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.924" endtime="20230105 19:40:23.924"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.923" endtime="20230105 19:40:23.924"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.920" endtime="20230105 19:40:23.924"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="73f723b5-8d1a-4683-8a2c-3d105fc6a3c9")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.927" level="INFO">${day} = 7</msg>
+<status status="PASS" starttime="20230105 19:40:23.924" endtime="20230105 19:40:23.927"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.927" endtime="20230105 19:40:23.927"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${end_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.928" endtime="20230105 19:40:23.928"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.928" endtime="20230105 19:40:23.928"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.928" endtime="20230105 19:40:23.928"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.927" endtime="20230105 19:40:23.928"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.924" endtime="20230105 19:40:23.928"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="6a0fb682-b68c-4c42-bf5b-6c346a8507d4")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.931" level="INFO">${day} = 8</msg>
+<status status="PASS" starttime="20230105 19:40:23.928" endtime="20230105 19:40:23.931"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.931" endtime="20230105 19:40:23.931"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${end_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.932" endtime="20230105 19:40:23.932"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.932" endtime="20230105 19:40:23.932"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.932" endtime="20230105 19:40:23.932"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.931" endtime="20230105 19:40:23.932"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.928" endtime="20230105 19:40:23.932"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="fa3f8702-6ad4-4cd1-88ae-06c6f7198a64")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.935" level="INFO">${day} = 9</msg>
+<status status="PASS" starttime="20230105 19:40:23.932" endtime="20230105 19:40:23.935"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.935" endtime="20230105 19:40:23.936"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${end_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.936" endtime="20230105 19:40:23.936"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.936" endtime="20230105 19:40:23.936"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.936" endtime="20230105 19:40:23.936"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.936" endtime="20230105 19:40:23.936"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.932" endtime="20230105 19:40:23.936"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="88a0f6dc-5e26-46f4-b204-575f7f8061df")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.939" level="INFO">${day} = 10</msg>
+<status status="PASS" starttime="20230105 19:40:23.936" endtime="20230105 19:40:23.940"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.940" endtime="20230105 19:40:23.940"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${end_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.940" endtime="20230105 19:40:23.940"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.940" endtime="20230105 19:40:23.940"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.940" endtime="20230105 19:40:23.940"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.940" endtime="20230105 19:40:23.940"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.936" endtime="20230105 19:40:23.940"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="5623a387-711e-4832-bdbc-781e6a9e34ca")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.943" level="INFO">${day} = 11</msg>
+<status status="PASS" starttime="20230105 19:40:23.940" endtime="20230105 19:40:23.943"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.943" endtime="20230105 19:40:23.944"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${end_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.944" endtime="20230105 19:40:23.944"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.944" endtime="20230105 19:40:23.944"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.944" endtime="20230105 19:40:23.944"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.944" endtime="20230105 19:40:23.944"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.940" endtime="20230105 19:40:23.944"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="ce371d98-83ff-4ebc-b386-ffda49873abd")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.947" level="INFO">${day} = 12</msg>
+<status status="PASS" starttime="20230105 19:40:23.944" endtime="20230105 19:40:23.947"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.947" endtime="20230105 19:40:23.947"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${end_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.948" endtime="20230105 19:40:23.948"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.948" endtime="20230105 19:40:23.948"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.948" endtime="20230105 19:40:23.948"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.948" endtime="20230105 19:40:23.948"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.944" endtime="20230105 19:40:23.948"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="0cc616e4-02a9-4e29-b1f3-96f134ab962f")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.951" level="INFO">${day} = 13</msg>
+<status status="PASS" starttime="20230105 19:40:23.948" endtime="20230105 19:40:23.951"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.951" endtime="20230105 19:40:23.951"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${end_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.952" endtime="20230105 19:40:23.952"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.952" endtime="20230105 19:40:23.952"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.952" endtime="20230105 19:40:23.952"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.951" endtime="20230105 19:40:23.952"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.948" endtime="20230105 19:40:23.952"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="65584bef-8efd-4fa5-965a-9e7baefc5caa")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.955" level="INFO">${day} = 14</msg>
+<status status="PASS" starttime="20230105 19:40:23.952" endtime="20230105 19:40:23.955"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.955" endtime="20230105 19:40:23.955"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${end_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.955" endtime="20230105 19:40:23.956"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.956" endtime="20230105 19:40:23.956"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.955" endtime="20230105 19:40:23.956"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.955" endtime="20230105 19:40:23.956"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.952" endtime="20230105 19:40:23.956"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="d6198733-95f9-4cec-a4bf-d66dc0249702")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.959" level="INFO">${day} = 15</msg>
+<status status="PASS" starttime="20230105 19:40:23.956" endtime="20230105 19:40:23.959"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.959" endtime="20230105 19:40:23.959"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${end_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.959" endtime="20230105 19:40:23.959"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.959" endtime="20230105 19:40:23.959"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.959" endtime="20230105 19:40:23.960"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.959" endtime="20230105 19:40:23.960"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.956" endtime="20230105 19:40:23.960"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="65802bb2-1b74-4f54-98dc-cf9971b37683")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.963" level="INFO">${day} = 16</msg>
+<status status="PASS" starttime="20230105 19:40:23.960" endtime="20230105 19:40:23.963"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.963" endtime="20230105 19:40:23.963"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${end_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.963" endtime="20230105 19:40:23.963"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.963" endtime="20230105 19:40:23.963"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.963" endtime="20230105 19:40:23.963"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.963" endtime="20230105 19:40:23.963"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.960" endtime="20230105 19:40:23.963"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="a95a1607-304f-498d-8587-997e51165a31")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.967" level="INFO">${day} = 17</msg>
+<status status="PASS" starttime="20230105 19:40:23.963" endtime="20230105 19:40:23.967"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.967" endtime="20230105 19:40:23.967"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${end_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.967" endtime="20230105 19:40:23.967"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.967" endtime="20230105 19:40:23.967"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.967" endtime="20230105 19:40:23.967"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.967" endtime="20230105 19:40:23.967"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.963" endtime="20230105 19:40:23.967"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="5b0db629-7acf-41ed-88f3-ea75e696c394")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.970" level="INFO">${day} = 18</msg>
+<status status="PASS" starttime="20230105 19:40:23.967" endtime="20230105 19:40:23.970"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.970" endtime="20230105 19:40:23.971"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${end_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.971" endtime="20230105 19:40:23.971"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.971" endtime="20230105 19:40:23.971"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.971" endtime="20230105 19:40:23.971"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.971" endtime="20230105 19:40:23.971"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.967" endtime="20230105 19:40:23.971"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="045dfe21-2eaa-481b-8b52-d0720b7bcb7e")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.974" level="INFO">${day} = 19</msg>
+<status status="PASS" starttime="20230105 19:40:23.971" endtime="20230105 19:40:23.974"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.974" endtime="20230105 19:40:23.974"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${end_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.975" endtime="20230105 19:40:23.975"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.975" endtime="20230105 19:40:23.975"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.975" endtime="20230105 19:40:23.975"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.974" endtime="20230105 19:40:23.975"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.971" endtime="20230105 19:40:23.975"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="a3d11dae-6193-4387-a229-ed88b72fd260")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.978" level="INFO">${day} = 20</msg>
+<status status="PASS" starttime="20230105 19:40:23.975" endtime="20230105 19:40:23.978"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.978" endtime="20230105 19:40:23.978"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${end_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.979" endtime="20230105 19:40:23.979"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.979" endtime="20230105 19:40:23.979"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.979" endtime="20230105 19:40:23.979"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.978" endtime="20230105 19:40:23.979"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.975" endtime="20230105 19:40:23.979"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="fa30ebc9-0af7-4c3c-b84b-cd3f207ec3eb")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.982" level="INFO">${day} = 21</msg>
+<status status="PASS" starttime="20230105 19:40:23.979" endtime="20230105 19:40:23.982"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.982" endtime="20230105 19:40:23.982"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${end_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.982" endtime="20230105 19:40:23.982"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.982" endtime="20230105 19:40:23.982"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.982" endtime="20230105 19:40:23.982"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.982" endtime="20230105 19:40:23.983"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.979" endtime="20230105 19:40:23.983"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="a2c2f867-f524-41a5-8a84-a74f557d0ad9")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.986" level="INFO">${day} = 22</msg>
+<status status="PASS" starttime="20230105 19:40:23.983" endtime="20230105 19:40:23.986"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.986" endtime="20230105 19:40:23.986"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${end_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.986" endtime="20230105 19:40:23.986"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.986" endtime="20230105 19:40:23.986"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.986" endtime="20230105 19:40:23.986"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.986" endtime="20230105 19:40:23.986"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.983" endtime="20230105 19:40:23.986"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="bab09542-2251-4e78-b364-8c8d6001c8e9")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.990" level="INFO">${day} = 23</msg>
+<status status="PASS" starttime="20230105 19:40:23.986" endtime="20230105 19:40:23.990"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.990" endtime="20230105 19:40:23.990"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${end_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230105 19:40:23.990" endtime="20230105 19:40:23.990"/>
+</kw>
+<break>
+<status status="NOT RUN" starttime="20230105 19:40:23.990" endtime="20230105 19:40:23.990"/>
+</break>
+<status status="NOT RUN" starttime="20230105 19:40:23.990" endtime="20230105 19:40:23.990"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.990" endtime="20230105 19:40:23.990"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.986" endtime="20230105 19:40:23.990"/>
+</iter>
+<iter>
+<var name="${i}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="57def7b7-711e-426c-a05d-66f5a68a9ec2")&gt;</var>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${day}</var>
+<arg>${i}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.994" level="INFO">${day} = 24</msg>
+<status status="PASS" starttime="20230105 19:40:23.990" endtime="20230105 19:40:23.994"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${day}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230105 19:40:23.994" endtime="20230105 19:40:23.994"/>
+</kw>
+<if>
+<branch type="IF" condition="${day} == ${end_datetime.day}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${i}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230105 19:40:23.994" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="d604df25-83a5-49b7-b2d2-63eb3798dc0a", element="57def7b7-711e-426c-a05d-66f5a68a9ec2")&gt;'.</msg>
+<status status="PASS" starttime="20230105 19:40:23.994" endtime="20230105 19:40:24.271"/>
+</kw>
+<break>
+<status status="PASS" starttime="20230105 19:40:24.271" endtime="20230105 19:40:24.271"/>
+</break>
+<status status="PASS" starttime="20230105 19:40:23.994" endtime="20230105 19:40:24.272"/>
+</branch>
+<status status="PASS" starttime="20230105 19:40:23.994" endtime="20230105 19:40:24.272"/>
+</if>
+<status status="PASS" starttime="20230105 19:40:23.990" endtime="20230105 19:40:24.272"/>
+</iter>
+<status status="PASS" starttime="20230105 19:40:23.888" endtime="20230105 19:40:24.272"/>
+</for>
+<kw name="Pick End DateTime Successful" library="resource">
+<arg>xpath:/html/body/div/div/section/div/div/div[1]/div/div[1]/div/div[1]/div/div[3]/input</arg>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${end_time_value}</var>
+<arg>${end_time_element}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20230105 19:40:24.294" level="INFO">${end_time_value} = 24/12/2021</msg>
+<status status="PASS" starttime="20230105 19:40:24.272" endtime="20230105 19:40:24.294"/>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<var>${end_datetime}</var>
+<arg>${END DATE}</arg>
+<arg>result_format=%d/%m/%Y</arg>
+<doc>Converts between supported `date formats`.</doc>
+<msg timestamp="20230105 19:40:24.294" level="INFO">${end_datetime} = 24/12/2021</msg>
+<status status="PASS" starttime="20230105 19:40:24.294" endtime="20230105 19:40:24.294"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${end_time_value}</arg>
+<arg>${end_datetime}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230105 19:40:24.294" endtime="20230105 19:40:24.295"/>
+</kw>
+<status status="PASS" starttime="20230105 19:40:24.272" endtime="20230105 19:40:24.295"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230105 19:40:24.295" endtime="20230105 19:40:24.653"/>
+</kw>
+<status status="PASS" starttime="20230105 19:40:14.813" endtime="20230105 19:40:24.653"/>
+</test>
+<status status="PASS" starttime="20230105 19:40:10.550" endtime="20230105 19:40:24.654"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Test Pickdate">Test Pickdate</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
