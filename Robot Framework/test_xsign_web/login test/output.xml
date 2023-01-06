@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.9.12 on linux)" generated="20230106 14:34:15.703" rpa="false" schemaversion="3">
+<suite id="s1" name="Valid Login" source="/home/vtn-thaontv/workspace/AutoTesting/Robot Framework/test_xsign_web/login test/valid_login.robot">
+<test id="s1-t1" name="Open Web and Verify Title" line="6">
+<kw name="Open Browser To Login Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL} ${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230106 14:34:15.795" level="INFO">Opening browser 'firefox' to base url 'http://171.244.173.203/xsign-admin/login Firefox'.</msg>
+<msg timestamp="20230106 14:34:15.796" level="INFO">Firefox driver log is always forced to to: /home/vtn-thaontv/workspace/AutoTesting/Robot Framework/test_xsign_web/login test/geckodriver-9.log</msg>
+<status status="PASS" starttime="20230106 14:34:15.795" endtime="20230106 14:34:18.317"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230106 14:34:18.317" endtime="20230106 14:34:18.586"/>
+</kw>
+<status status="PASS" starttime="20230106 14:34:15.795" endtime="20230106 14:34:18.586"/>
+</kw>
+<kw name="Login Page Should Be Open" library="resource">
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${GET TITLE}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20230106 14:34:18.591" level="INFO">${GET TITLE} = Login - XSign Management</msg>
+<status status="PASS" starttime="20230106 14:34:18.587" endtime="20230106 14:34:18.591"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Login - XSign Management</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230106 14:34:18.592" level="INFO">Page title is 'Login - XSign Management'.</msg>
+<status status="PASS" starttime="20230106 14:34:18.591" endtime="20230106 14:34:18.592"/>
+</kw>
+<status status="PASS" starttime="20230106 14:34:18.587" endtime="20230106 14:34:18.592"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230106 14:34:18.592" endtime="20230106 14:34:19.973"/>
+</kw>
+<status status="PASS" starttime="20230106 14:34:15.795" endtime="20230106 14:34:19.973"/>
+</test>
+<test id="s1-t2" name="Login Successful Test" line="11">
+<kw name="Open Browser To Login Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL} ${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230106 14:34:19.974" level="INFO">Opening browser 'firefox' to base url 'http://171.244.173.203/xsign-admin/login Firefox'.</msg>
+<msg timestamp="20230106 14:34:19.974" level="INFO">Firefox driver log is always forced to to: /home/vtn-thaontv/workspace/AutoTesting/Robot Framework/test_xsign_web/login test/geckodriver-10.log</msg>
+<status status="PASS" starttime="20230106 14:34:19.974" endtime="20230106 14:34:22.629"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230106 14:34:22.630" endtime="20230106 14:34:22.903"/>
+</kw>
+<status status="PASS" starttime="20230106 14:34:19.973" endtime="20230106 14:34:22.903"/>
+</kw>
+<kw name="Input Username" library="resource">
+<arg>${VALID USER}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:basic_username</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230106 14:34:22.905" level="INFO">Typing text 'hni_manager' into text field 'id:basic_username'.</msg>
+<status status="PASS" starttime="20230106 14:34:22.904" endtime="20230106 14:34:23.007"/>
+</kw>
+<status status="PASS" starttime="20230106 14:34:22.904" endtime="20230106 14:34:23.007"/>
+</kw>
+<kw name="Input Password" library="resource">
+<arg>${VALID PASSWORD}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:basic_password</arg>
+<arg>${pwd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230106 14:34:23.008" level="INFO">Typing text 'Xsign@HNI2021' into text field 'id:basic_password'.</msg>
+<status status="PASS" starttime="20230106 14:34:23.008" endtime="20230106 14:34:23.055"/>
+</kw>
+<status status="PASS" starttime="20230106 14:34:23.007" endtime="20230106 14:34:23.055"/>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Đăng nhập</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230106 14:34:23.056" level="INFO">Clicking button 'Đăng nhập'.</msg>
+<status status="PASS" starttime="20230106 14:34:23.055" endtime="20230106 14:34:23.290"/>
+</kw>
+<status status="PASS" starttime="20230106 14:34:23.055" endtime="20230106 14:34:23.290"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230106 14:34:24.291" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230106 14:34:23.290" endtime="20230106 14:34:24.291"/>
+</kw>
+<kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
+<arg>id:basic_username</arg>
+<doc>Waits until the element ``locator`` disappears from the current page.</doc>
+<status status="PASS" starttime="20230106 14:34:24.291" endtime="20230106 14:34:24.293"/>
+</kw>
+<kw name="Welcome Page Should Be Open" library="resource">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${SERVER}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230106 14:34:24.295" level="INFO">Current location is 'http://171.244.173.203/xsign-admin'.</msg>
+<status status="PASS" starttime="20230106 14:34:24.294" endtime="20230106 14:34:24.295"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>X-Sign management</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230106 14:34:24.296" level="INFO">Page title is 'X-Sign management'.</msg>
+<status status="PASS" starttime="20230106 14:34:24.295" endtime="20230106 14:34:24.296"/>
+</kw>
+<status status="PASS" starttime="20230106 14:34:24.293" endtime="20230106 14:34:24.296"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230106 14:34:27.296" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230106 14:34:24.296" endtime="20230106 14:34:27.296"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230106 14:34:27.297" endtime="20230106 14:34:27.659"/>
+</kw>
+<status status="PASS" starttime="20230106 14:34:19.973" endtime="20230106 14:34:27.659"/>
+</test>
+<test id="s1-t3" name="Login UnSuccessful Test" line="22">
+<kw name="Open Browser To Login Page" library="resource">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL} ${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230106 14:34:27.661" level="INFO">Opening browser 'firefox' to base url 'http://171.244.173.203/xsign-admin/login Firefox'.</msg>
+<msg timestamp="20230106 14:34:27.661" level="INFO">Firefox driver log is always forced to to: /home/vtn-thaontv/workspace/AutoTesting/Robot Framework/test_xsign_web/login test/geckodriver-11.log</msg>
+<status status="PASS" starttime="20230106 14:34:27.660" endtime="20230106 14:34:30.105"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230106 14:34:30.105" endtime="20230106 14:34:30.370"/>
+</kw>
+<status status="PASS" starttime="20230106 14:34:27.660" endtime="20230106 14:34:30.370"/>
+</kw>
+<kw name="Input Username" library="resource">
+<arg>${INVALID USER}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:basic_username</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230106 14:34:30.372" level="INFO">Typing text 'hni' into text field 'id:basic_username'.</msg>
+<status status="PASS" starttime="20230106 14:34:30.371" endtime="20230106 14:34:30.456"/>
+</kw>
+<status status="PASS" starttime="20230106 14:34:30.371" endtime="20230106 14:34:30.456"/>
+</kw>
+<kw name="Input Password" library="resource">
+<arg>${VALID PASSWORD}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:basic_password</arg>
+<arg>${pwd}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230106 14:34:30.457" level="INFO">Typing text 'Xsign@HNI2021' into text field 'id:basic_password'.</msg>
+<status status="PASS" starttime="20230106 14:34:30.457" endtime="20230106 14:34:30.510"/>
+</kw>
+<status status="PASS" starttime="20230106 14:34:30.457" endtime="20230106 14:34:30.511"/>
+</kw>
+<kw name="Submit Credentials" library="resource">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Đăng nhập</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230106 14:34:30.511" level="INFO">Clicking button 'Đăng nhập'.</msg>
+<status status="PASS" starttime="20230106 14:34:30.511" endtime="20230106 14:34:30.743"/>
+</kw>
+<status status="PASS" starttime="20230106 14:34:30.511" endtime="20230106 14:34:30.743"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230106 14:34:31.743" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20230106 14:34:30.743" endtime="20230106 14:34:31.743"/>
+</kw>
+<kw name="Welcome Page Should Be Open" library="resource">
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${SERVER}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230106 14:34:31.789" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230106 14:34:31.789" level="FAIL">Location should have been 'http://171.244.173.203/xsign-admin' but was 'http://171.244.173.203/xsign-admin/login'.</msg>
+<status status="FAIL" starttime="20230106 14:34:31.744" endtime="20230106 14:34:31.789"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>X-Sign management</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="NOT RUN" starttime="20230106 14:34:31.789" endtime="20230106 14:34:31.789"/>
+</kw>
+<status status="FAIL" starttime="20230106 14:34:31.743" endtime="20230106 14:34:31.789"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230106 14:34:31.790" endtime="20230106 14:34:31.790"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230106 14:34:31.790" endtime="20230106 14:34:32.156"/>
+</kw>
+<status status="FAIL" starttime="20230106 14:34:27.660" endtime="20230106 14:34:32.156">Location should have been 'http://171.244.173.203/xsign-admin' but was 'http://171.244.173.203/xsign-admin/login'.</status>
+</test>
+<status status="FAIL" starttime="20230106 14:34:15.704" endtime="20230106 14:34:32.156"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="1" skip="0" id="s1" name="Valid Login">Valid Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

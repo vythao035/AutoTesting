@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.9.12 on linux)" generated="20230106 14:26:40.603" rpa="false" schemaversion="3">
+<suite id="s1" name="Test Get All Users" source="/home/vtn-thaontv/workspace/AutoTesting/Robot Framework/API testing/test_api_get_all_users/test_get_all_users.robot">
+<test id="s1-t1" name="Get All Users Request Test" line="25">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>session</arg>
+<arg>${SERVER}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20230106 14:26:40.677" level="INFO">Creating Session using : alias=session, url=http://171.244.173.203/x-sign-admin-ws/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20230106 14:26:40.677" endtime="20230106 14:26:40.677"/>
+</kw>
+<kw name="Get Token When Login">
+<var>${token}</var>
+<arg>${VALID USER}</arg>
+<arg>${VALID PASSWORD}</arg>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>session</arg>
+<arg>${SERVER}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20230106 14:26:40.677" level="INFO">Creating Session using : alias=session, url=http://171.244.173.203/x-sign-admin-ws/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20230106 14:26:40.677" endtime="20230106 14:26:40.677"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${data}</var>
+<arg>username=${user}</arg>
+<arg>password=${pwd}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230106 14:26:40.678" level="INFO">${data} = {'username': 'hni_manager', 'password': 'Xsign@HNI2021'}</msg>
+<status status="PASS" starttime="20230106 14:26:40.678" endtime="20230106 14:26:40.678"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${header}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230106 14:26:40.678" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20230106 14:26:40.678" endtime="20230106 14:26:40.678"/>
+</kw>
+<kw name="POST On Session" library="RequestsLibrary">
+<var>${resp}</var>
+<arg>session</arg>
+<arg>/login</arg>
+<arg>json=${data}</arg>
+<arg>headers=${header}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<msg timestamp="20230106 14:26:40.943" level="INFO">POST Request : url=http://171.244.173.203/x-sign-admin-ws/login 
+ path_url=/x-sign-admin-ws/login 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '56'} 
+ body=b'{"username": "hni_manager", "password": "Xsign@HNI2021"}' 
+ </msg>
+<msg timestamp="20230106 14:26:40.943" level="INFO">POST Response : url=http://171.244.173.203/x-sign-admin-ws/login 
+ status=200, reason=OK 
+ headers={'Date': 'Fri, 06 Jan 2023 07:26:40 GMT', 'Content-Type': 'application/json', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'X-Cache': 'MISS from proxy-vtnet', 'X-Cache-Lookup': 'MISS from proxy-vtnet:3128', 'Transfer-Encoding': 'chunked', 'Via': '1.1 proxy-vtnet (squid/4.9)', 'Connection': 'keep-alive'} 
+ body={"token":"eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NzI5OTM2MDAsInVzZXJuYW1lIjoiaG5pX21hbmFnZXIiLCJyb2xlIjoiYWRtaW5fcHJvdmluY2UiLCJyb2xlSWQiOiJiNDJhOTU3Zi1lYzI2LTQ3MmEtYmRmOC00OWNhZTY2ZTc0YTYifQ.04YaWdcxgFfrxIe0L5OsUAVZY8u61LLSxn1YNP70U4sG50vfE3BWNPuztUYv49q3rAiUFStxqh7zeggVyr5LRw","expireTime":1672993600336,"roleId":"b42a957f-ec26-472a-bdf8-49cae66e74a6"} 
+ </msg>
+<msg timestamp="20230106 14:26:40.943" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230106 14:26:40.678" endtime="20230106 14:26:40.943"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>${token_list}</var>
+<arg>${resp.json()}</arg>
+<arg>token</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20230106 14:26:40.957" level="INFO">${token_list} = ['eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NzI5OTM2MDAsInVzZXJuYW1lIjoiaG5pX21hbmFnZXIiLCJyb2xlIjoiYWRtaW5fcHJvdmluY2UiLCJyb2xlSWQiOiJiNDJhOTU3Zi1lYzI2LTQ3MmEtYmRmOC00OWNhZTY2ZTc0YTYifQ.04YaWdcxgFfrxIe0L5OsUA...</msg>
+<status status="PASS" starttime="20230106 14:26:40.943" endtime="20230106 14:26:40.957"/>
+</kw>
+<kw name="Get From List" library="Collections">
+<var>${token}</var>
+<arg>${token_list}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<msg timestamp="20230106 14:26:40.957" level="INFO">${token} = eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NzI5OTM2MDAsInVzZXJuYW1lIjoiaG5pX21hbmFnZXIiLCJyb2xlIjoiYWRtaW5fcHJvdmluY2UiLCJyb2xlSWQiOiJiNDJhOTU3Zi1lYzI2LTQ3MmEtYmRmOC00OWNhZTY2ZTc0YTYifQ.04YaWdcxgFfrxIe0L5OsUAVZ...</msg>
+<status status="PASS" starttime="20230106 14:26:40.957" endtime="20230106 14:26:40.957"/>
+</kw>
+<msg timestamp="20230106 14:26:40.957" level="INFO">${token} = eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NzI5OTM2MDAsInVzZXJuYW1lIjoiaG5pX21hbmFnZXIiLCJyb2xlIjoiYWRtaW5fcHJvdmluY2UiLCJyb2xlSWQiOiJiNDJhOTU3Zi1lYzI2LTQ3MmEtYmRmOC00OWNhZTY2ZTc0YTYifQ.04YaWdcxgFfrxIe0L5OsUAVZ...</msg>
+<status status="PASS" starttime="20230106 14:26:40.677" endtime="20230106 14:26:40.957"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${header}</var>
+<arg>Content-Type=application/json</arg>
+<arg>Authorization=${token}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230106 14:26:40.958" level="INFO">${header} = {'Content-Type': 'application/json', 'Authorization': 'eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NzI5OTM2MDAsInVzZXJuYW1lIjoiaG5pX21hbmFnZXIiLCJyb2xlIjoiYWRtaW5fcHJvdmluY2UiLCJyb2xlSWQiOiJiNDJhOTU3Zi1lYzI2LTQ3...</msg>
+<status status="PASS" starttime="20230106 14:26:40.958" endtime="20230106 14:26:40.958"/>
+</kw>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${resp}</var>
+<arg>session</arg>
+<arg>/all-user</arg>
+<arg>headers=${header}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20230106 14:26:41.022" level="INFO">GET Request : url=http://171.244.173.203/x-sign-admin-ws/all-user 
+ path_url=/x-sign-admin-ws/all-user 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Authorization': 'eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NzI5OTM2MDAsInVzZXJuYW1lIjoiaG5pX21hbmFnZXIiLCJyb2xlIjoiYWRtaW5fcHJvdmluY2UiLCJyb2xlSWQiOiJiNDJhOTU3Zi1lYzI2LTQ3MmEtYmRmOC00OWNhZTY2ZTc0YTYifQ.04YaWdcxgFfrxIe0L5OsUAVZY8u61LLSxn1YNP70U4sG50vfE3BWNPuztUYv49q3rAiUFStxqh7zeggVyr5LRw'} 
+ body=None 
+ </msg>
+<msg timestamp="20230106 14:26:41.022" level="INFO">GET Response : url=http://171.244.173.203/x-sign-admin-ws/all-user 
+ status=200, reason=OK 
+ headers={'Date': 'Fri, 06 Jan 2023 07:26:40 GMT', 'Content-Type': 'application/json', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'X-Cache': 'MISS from proxy-vtnet', 'X-Cache-Lookup': 'MISS from proxy-vtnet:3128', 'Transfer-Encoding': 'chunked', 'Via': '1.1 proxy-vtnet (squid/4.9)', 'Connection': 'keep-alive'} 
+ body=[{"userId":"be18fe55-2931-4038-bb3b-d1d9cb865338","username":"anhbq6","email":"anhbq6@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"90c730ba-d8e1-42eb-918b-0846e01c92aa","username":"anhdn27","email":"anhdn27@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"27909887-901f-4e7c-bc13-e4e2b6df1dbb","username":"anhdt159","email":"anhdt159@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"2c0d29d8-45f1-4a17-b55a-1fc41ceb4596","username":"anhdt42","email":"anhdt42@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"1d20e5c4-34c8-46eb-a05a-955accc842d5","username":"anhht21","email":"anhht21@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"2b9cd722-4461-490b-bb41-b373f636f0da","username":"anhlt161","email":"anhlt161@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"81dca993-9581-4916-9e74-7e5ee36b358f","username":"anhlt27","email":"anhlt27@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"b3060a5c-178f-408a-b75f-42dc22c18c88","username":"anhndt2","email":"anhndt2@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"8b91cbb9-9c6e-4a62-950d-b51d9acbd374","username":"anhnh1","email":"anhnh1@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"c22d1236-ee85-474d-8f27-acaf01dd8564","username":"anhnn22","email":"anhnn22@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"11033a57-ccf1-43e5-bbf3-7404eecb43e6","username":"anhnv181","email":"anhnv181@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"e9aed18b-e53b-48db-a872-fe37e0a224ba","username":"anhpn36","email":"anhpn36@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"c193fb2f-971c-43c0-8521-ce9c8bf745ae","username":"anhpt17","email":"anhpt17@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"5b42d64a-5991-47c5-b3d1-a5b8fb01bb89","username":"annv287","email":"annv287@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"684cf94e-0277-4da8-b309-fee937dfad3d","username":"bachcv","email":"bachcv@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"63080a2b-9a23-4923-bd0d-b9e02b4aa945","username":"baclm","email":"baclm@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"4b30cce9-fda5-47c7-b604-bfe4d8c220e3","username":"baclv7","email":"baclv7@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"c5d9bab0-0a7b-4035-82ef-b8e225260257","username":"bangnc5","email":"bangnc5@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"db5b650b-b5b2-4f36-a655-bbbafa99f185","username":"bangpv2","email":"bangpv2@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"5ab6a180-7fb8-4315-a729-0e918ee3109e","username":"bangvv","email":"bangvv@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"f84f375a-075b-457a-8f65-58049dbbff41","username":"batx","email":"batx@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"56366414-bb4e-4366-846c-8bc7c33e7bb0","username":"biennh6","email":"biennh6@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"fc6ce456-5c63-4d18-9648-2b66e065723e","username":"bienpv2","email":"bienpv2@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"10f27449-0bb3-4a4e-96f3-c9a009b91ac7","username":"binhdv3","email":"binhdv3@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"de185838-e9fe-4ef1-b9e6-f92b6b5f7c5b","username":"binhdv7","email":"binhdv7@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"84a6320a-cc73-4eb1-8f50-3a7e90d95023","username":"binhhh3","email":"binhhh3@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"14028734-5e1e-4715-873f-3703888f0b9d","username":"binhld5","email":"binhld5@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"af230a3a-3ff5-4260-b24a-6e446d622d86","username":"binhnd19","email":"binhnd19@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"6195820d-0b91-4fbc-9f74-3aab8440d79c","username":"binhnt56","email":"binhnt56@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"c63e62fa-2043-4500-a208-1b34418b12a5","username":"binhnt74","email":"binhnt74@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"f2c99243-979d-4059-9269-cf3701405f24","username":"binhnv30","email":"binhnv30@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"954f8d9d-1fa2-48e9-9fe1-b080e4dadb30","username":"binhtn4","email":"binhtn4@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"b089b766-8670-4853-ba63-ba3c35f54b41","username":"bonnv3","email":"bonnv3@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"9a4b395f-9772-44a0-bc2b-7e36bc882701","username":"cant2","email":"cant2@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"6b7cfc40-a134-486b-8145-c3780e608ec2","username":"cant3","email":"cant3@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"981a5dd8-865b-410f-9988-34d6cde069c0","username":"chanhnh1","email":"chanhnh1@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"8347b12e-b72f-444d-9cea-ceb803216ebf","username":"chiennq12","email":"chiennq12@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"021d76c3-4bba-43cd-aaf5-8af8bc3c52c8","username":"chienpv6","email":"chienpv6@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"4c81ed40-ad4a-4d8a-88f2-a05f8a6c0884","username":"chientv11","email":"chientv11@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"df5fc312-4c78-4de0-818b-8b670b2d7617","username":"chieupv","email":"chieupv@viettel.com.vn","provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kvId":"0ecab9ae-ba01-4ebb-b217-7ea226f90f52","kv":"KV1","routes":null},{"userId":"77da69a0-5c81-4801-9616-52427a67b62e","username":"chinhmv","email":"chinhmv@viettel.com.vn","provinceId":"5847d0... (set the log level to DEBUG or TRACE to see the full content) 
+ </msg>
+<msg timestamp="20230106 14:26:41.023" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230106 14:26:40.958" endtime="20230106 14:26:41.023"/>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<arg>200</arg>
+<arg>${resp}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" starttime="20230106 14:26:41.023" endtime="20230106 14:26:41.023"/>
+</kw>
+<status status="PASS" starttime="20230106 14:26:40.676" endtime="20230106 14:26:41.023"/>
+</test>
+<test id="s1-t2" name="Get Province Request Test" line="33">
+<kw name="Create Session" library="RequestsLibrary">
+<arg>session</arg>
+<arg>${SERVER}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20230106 14:26:41.024" level="INFO">Creating Session using : alias=session, url=http://171.244.173.203/x-sign-admin-ws/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20230106 14:26:41.023" endtime="20230106 14:26:41.024"/>
+</kw>
+<kw name="Get Token When Login">
+<var>${token}</var>
+<arg>${VALID USER}</arg>
+<arg>${VALID PASSWORD}</arg>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>session</arg>
+<arg>${SERVER}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20230106 14:26:41.024" level="INFO">Creating Session using : alias=session, url=http://171.244.173.203/x-sign-admin-ws/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20230106 14:26:41.024" endtime="20230106 14:26:41.024"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${data}</var>
+<arg>username=${user}</arg>
+<arg>password=${pwd}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230106 14:26:41.025" level="INFO">${data} = {'username': 'hni_manager', 'password': 'Xsign@HNI2021'}</msg>
+<status status="PASS" starttime="20230106 14:26:41.024" endtime="20230106 14:26:41.025"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${header}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230106 14:26:41.025" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20230106 14:26:41.025" endtime="20230106 14:26:41.025"/>
+</kw>
+<kw name="POST On Session" library="RequestsLibrary">
+<var>${resp}</var>
+<arg>session</arg>
+<arg>/login</arg>
+<arg>json=${data}</arg>
+<arg>headers=${header}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<msg timestamp="20230106 14:26:41.231" level="INFO">POST Request : url=http://171.244.173.203/x-sign-admin-ws/login 
+ path_url=/x-sign-admin-ws/login 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '56'} 
+ body=b'{"username": "hni_manager", "password": "Xsign@HNI2021"}' 
+ </msg>
+<msg timestamp="20230106 14:26:41.231" level="INFO">POST Response : url=http://171.244.173.203/x-sign-admin-ws/login 
+ status=200, reason=OK 
+ headers={'Date': 'Fri, 06 Jan 2023 07:26:40 GMT', 'Content-Type': 'application/json', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'X-Cache': 'MISS from proxy-vtnet', 'X-Cache-Lookup': 'MISS from proxy-vtnet:3128', 'Transfer-Encoding': 'chunked', 'Via': '1.1 proxy-vtnet (squid/4.9)', 'Connection': 'keep-alive'} 
+ body={"token":"eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NzI5OTM2MDAsInVzZXJuYW1lIjoiaG5pX21hbmFnZXIiLCJyb2xlIjoiYWRtaW5fcHJvdmluY2UiLCJyb2xlSWQiOiJiNDJhOTU3Zi1lYzI2LTQ3MmEtYmRmOC00OWNhZTY2ZTc0YTYifQ.04YaWdcxgFfrxIe0L5OsUAVZY8u61LLSxn1YNP70U4sG50vfE3BWNPuztUYv49q3rAiUFStxqh7zeggVyr5LRw","expireTime":1672993600627,"roleId":"b42a957f-ec26-472a-bdf8-49cae66e74a6"} 
+ </msg>
+<msg timestamp="20230106 14:26:41.231" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230106 14:26:41.025" endtime="20230106 14:26:41.231"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>${token_list}</var>
+<arg>${resp.json()}</arg>
+<arg>token</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20230106 14:26:41.243" level="INFO">${token_list} = ['eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NzI5OTM2MDAsInVzZXJuYW1lIjoiaG5pX21hbmFnZXIiLCJyb2xlIjoiYWRtaW5fcHJvdmluY2UiLCJyb2xlSWQiOiJiNDJhOTU3Zi1lYzI2LTQ3MmEtYmRmOC00OWNhZTY2ZTc0YTYifQ.04YaWdcxgFfrxIe0L5OsUA...</msg>
+<status status="PASS" starttime="20230106 14:26:41.231" endtime="20230106 14:26:41.243"/>
+</kw>
+<kw name="Get From List" library="Collections">
+<var>${token}</var>
+<arg>${token_list}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<msg timestamp="20230106 14:26:41.243" level="INFO">${token} = eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NzI5OTM2MDAsInVzZXJuYW1lIjoiaG5pX21hbmFnZXIiLCJyb2xlIjoiYWRtaW5fcHJvdmluY2UiLCJyb2xlSWQiOiJiNDJhOTU3Zi1lYzI2LTQ3MmEtYmRmOC00OWNhZTY2ZTc0YTYifQ.04YaWdcxgFfrxIe0L5OsUAVZ...</msg>
+<status status="PASS" starttime="20230106 14:26:41.243" endtime="20230106 14:26:41.243"/>
+</kw>
+<msg timestamp="20230106 14:26:41.243" level="INFO">${token} = eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NzI5OTM2MDAsInVzZXJuYW1lIjoiaG5pX21hbmFnZXIiLCJyb2xlIjoiYWRtaW5fcHJvdmluY2UiLCJyb2xlSWQiOiJiNDJhOTU3Zi1lYzI2LTQ3MmEtYmRmOC00OWNhZTY2ZTc0YTYifQ.04YaWdcxgFfrxIe0L5OsUAVZ...</msg>
+<status status="PASS" starttime="20230106 14:26:41.024" endtime="20230106 14:26:41.243"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${header}</var>
+<arg>Content-Type=application/json</arg>
+<arg>Authorization=${token}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230106 14:26:41.244" level="INFO">${header} = {'Content-Type': 'application/json', 'Authorization': 'eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NzI5OTM2MDAsInVzZXJuYW1lIjoiaG5pX21hbmFnZXIiLCJyb2xlIjoiYWRtaW5fcHJvdmluY2UiLCJyb2xlSWQiOiJiNDJhOTU3Zi1lYzI2LTQ3...</msg>
+<status status="PASS" starttime="20230106 14:26:41.243" endtime="20230106 14:26:41.244"/>
+</kw>
+<kw name="GET On Session" library="RequestsLibrary">
+<var>${resp}</var>
+<arg>session</arg>
+<arg>/provinces</arg>
+<arg>headers=${header}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<msg timestamp="20230106 14:26:41.260" level="INFO">GET Request : url=http://171.244.173.203/x-sign-admin-ws/provinces 
+ path_url=/x-sign-admin-ws/provinces 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Authorization': 'eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NzI5OTM2MDAsInVzZXJuYW1lIjoiaG5pX21hbmFnZXIiLCJyb2xlIjoiYWRtaW5fcHJvdmluY2UiLCJyb2xlSWQiOiJiNDJhOTU3Zi1lYzI2LTQ3MmEtYmRmOC00OWNhZTY2ZTc0YTYifQ.04YaWdcxgFfrxIe0L5OsUAVZY8u61LLSxn1YNP70U4sG50vfE3BWNPuztUYv49q3rAiUFStxqh7zeggVyr5LRw'} 
+ body=None 
+ </msg>
+<msg timestamp="20230106 14:26:41.260" level="INFO">GET Response : url=http://171.244.173.203/x-sign-admin-ws/provinces 
+ status=200, reason=OK 
+ headers={'Date': 'Fri, 06 Jan 2023 07:26:40 GMT', 'Content-Type': 'application/json', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'X-Cache': 'MISS from proxy-vtnet', 'X-Cache-Lookup': 'MISS from proxy-vtnet:3128', 'Transfer-Encoding': 'chunked', 'Via': '1.1 proxy-vtnet (squid/4.9)', 'Connection': 'keep-alive'} 
+ body=[{"provinceId":"5847d054-6eeb-44f4-956e-9f13fdacf691","province":"Ha Noi","kv":"KV1","totalDistance":0.0,"distanceProvinceDistrict":0.0}] 
+ </msg>
+<msg timestamp="20230106 14:26:41.260" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230106 14:26:41.244" endtime="20230106 14:26:41.260"/>
+</kw>
+<kw name="Get From List" library="Collections">
+<var>${resp_content}</var>
+<arg>${resp.json()}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<msg timestamp="20230106 14:26:41.261" level="INFO">${resp_content} = {'provinceId': '5847d054-6eeb-44f4-956e-9f13fdacf691', 'province': 'Ha Noi', 'kv': 'KV1', 'totalDistance': 0.0, 'distanceProvinceDistrict': 0.0}</msg>
+<status status="PASS" starttime="20230106 14:26:41.261" endtime="20230106 14:26:41.261"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>${province_name_list}</var>
+<arg>${resp_content}</arg>
+<arg>province</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20230106 14:26:41.273" level="INFO">${province_name_list} = ['Ha Noi']</msg>
+<status status="PASS" starttime="20230106 14:26:41.261" endtime="20230106 14:26:41.273"/>
+</kw>
+<kw name="Get From List" library="Collections">
+<var>${province_name}</var>
+<arg>${province_name_list}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<msg timestamp="20230106 14:26:41.273" level="INFO">${province_name} = Ha Noi</msg>
+<status status="PASS" starttime="20230106 14:26:41.273" endtime="20230106 14:26:41.273"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${province_name}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230106 14:26:41.274" endtime="20230106 14:26:41.274"/>
+</kw>
+<kw name="Status Should Be" library="RequestsLibrary">
+<arg>200</arg>
+<arg>${resp}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" starttime="20230106 14:26:41.274" endtime="20230106 14:26:41.274"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${province_name}</arg>
+<arg>Ha Noi</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230106 14:26:41.274" endtime="20230106 14:26:41.274"/>
+</kw>
+<status status="PASS" starttime="20230106 14:26:41.023" endtime="20230106 14:26:41.274"/>
+</test>
+<status status="PASS" starttime="20230106 14:26:40.603" endtime="20230106 14:26:41.275"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Test Get All Users">Test Get All Users</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

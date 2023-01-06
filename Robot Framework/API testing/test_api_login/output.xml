@@ -1,65 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.9.11 on win32)" generated="20230105 23:04:17.568" rpa="false" schemaversion="3">
-<suite id="s1" name="Test Api Login" source="C:\Users\Working Space\AutoTesting\Robot Framework\API testing\test_api_login\test_api_login">
-<test id="s1-t1" name="Login Request Test" line="9">
+<robot generator="Robot 6.0.1 (Python 3.9.12 on linux)" generated="20230106 11:29:18.389" rpa="false" schemaversion="3">
+<suite id="s1" name="Test Api Login" source="/home/vtn-thaontv/workspace/AutoTesting/Robot Framework/API testing/test_api_login/test_api_login.robot">
+<test id="s1-t1" name="Login Successful Request Test" line="14">
 <kw name="Create Session" library="RequestsLibrary">
-<arg>LoginSession</arg>
-<arg>${Server}</arg>
+<arg>login_session</arg>
+<arg>${SERVER}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20230105 23:04:17.686" level="INFO">Creating Session using : alias=LoginSession, url=http://171.244.173.203/xsign-admin/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20230105 23:04:17.686" endtime="20230105 23:04:17.686"/>
+<msg timestamp="20230106 11:29:18.461" level="INFO">Creating Session using : alias=login_session, url=http://171.244.173.203/x-sign-admin-ws/, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20230106 11:29:18.461" endtime="20230106 11:29:18.462"/>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
 <var>${data}</var>
-<arg>username=hni_manager</arg>
-<arg>password=Xsign@HNI2021</arg>
+<arg>username=${VALID USER}</arg>
+<arg>password=${VALID PASSWORD}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20230105 23:04:17.686" level="INFO">${data} = {'username': 'hni_manager', 'password': 'Xsign@HNI2021'}</msg>
-<status status="PASS" starttime="20230105 23:04:17.686" endtime="20230105 23:04:17.686"/>
+<msg timestamp="20230106 11:29:18.462" level="INFO">${data} = {'username': 'hni_manager', 'password': 'Xsign@HNI2021'}</msg>
+<status status="PASS" starttime="20230106 11:29:18.462" endtime="20230106 11:29:18.462"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${header}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20230106 11:29:18.462" level="INFO">${header} = {'Content-Type': 'application/json'}</msg>
+<status status="PASS" starttime="20230106 11:29:18.462" endtime="20230106 11:29:18.462"/>
 </kw>
 <kw name="POST On Session" library="RequestsLibrary">
-<var>${response}</var>
-<arg>LoginSession</arg>
+<var>${resp}</var>
+<arg>login_session</arg>
 <arg>/login</arg>
-<arg>${data}</arg>
+<arg>json=${data}</arg>
+<arg>headers=${header}</arg>
 <doc>Sends a POST request on a previously created HTTP Session.</doc>
-<msg timestamp="20230105 23:04:17.702" level="INFO">POST Request : url=http://171.244.173.203/xsign-admin/login 
- path_url=/xsign-admin/login 
- headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '45', 'Content-Type': 'application/x-www-form-urlencoded'} 
- body=username=hni_manager&amp;password=Xsign%40HNI2021 
+<msg timestamp="20230106 11:29:18.722" level="INFO">POST Request : url=http://171.244.173.203/x-sign-admin-ws/login 
+ path_url=/x-sign-admin-ws/login 
+ headers={'User-Agent': 'python-requests/2.27.1', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '56'} 
+ body=b'{"username": "hni_manager", "password": "Xsign@HNI2021"}' 
  </msg>
-<msg timestamp="20230105 23:04:17.702" level="INFO">POST Response : url=http://171.244.173.203/xsign-admin/login 
- status=405, reason=Not Allowed 
- headers={'Date': 'Thu, 05 Jan 2023 16:04:19 GMT', 'Content-Type': 'text/html', 'Content-Length': '157', 'Connection': 'keep-alive'} 
- body=&lt;html&gt;
-&lt;head&gt;&lt;title&gt;405 Not Allowed&lt;/title&gt;&lt;/head&gt;
-&lt;body&gt;
-&lt;center&gt;&lt;h1&gt;405 Not Allowed&lt;/h1&gt;&lt;/center&gt;
-&lt;hr&gt;&lt;center&gt;nginx/1.20.2&lt;/center&gt;
-&lt;/body&gt;
-&lt;/html&gt;
- 
+<msg timestamp="20230106 11:29:18.722" level="INFO">POST Response : url=http://171.244.173.203/x-sign-admin-ws/login 
+ status=200, reason=OK 
+ headers={'Date': 'Fri, 06 Jan 2023 04:29:18 GMT', 'Content-Type': 'application/json', 'Vary': 'Origin, Access-Control-Request-Method, Access-Control-Request-Headers', 'X-Cache': 'MISS from proxy-vtnet', 'X-Cache-Lookup': 'MISS from proxy-vtnet:3128', 'Transfer-Encoding': 'chunked', 'Via': '1.1 proxy-vtnet (squid/4.9)', 'Connection': 'keep-alive'} 
+ body={"token":"eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NzI5ODI5NTgsInVzZXJuYW1lIjoiaG5pX21hbmFnZXIiLCJyb2xlIjoiYWRtaW5fcHJvdmluY2UiLCJyb2xlSWQiOiJiNDJhOTU3Zi1lYzI2LTQ3MmEtYmRmOC00OWNhZTY2ZTc0YTYifQ.SdcCgx_bgpOm2k4njGKiPAA6guY67NVWxk_ajbq_OIdWABnDI7bRd2Ne068Kd5weJEhHuWOvPBuTp0Rty0TW7A","expireTime":1672982958414,"roleId":"b42a957f-ec26-472a-bdf8-49cae66e74a6"} 
  </msg>
-<msg timestamp="20230105 23:04:17.702" level="FAIL">HTTPError: 405 Client Error: Not Allowed for url: http://171.244.173.203/xsign-admin/login</msg>
-<status status="FAIL" starttime="20230105 23:04:17.686" endtime="20230105 23:04:17.702"/>
+<msg timestamp="20230106 11:29:18.723" level="INFO">${resp} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20230106 11:29:18.462" endtime="20230106 11:29:18.723"/>
+</kw>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>${token_list}</var>
+<arg>${resp.json()}</arg>
+<arg>token</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20230106 11:29:18.737" level="INFO">${token_list} = ['eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NzI5ODI5NTgsInVzZXJuYW1lIjoiaG5pX21hbmFnZXIiLCJyb2xlIjoiYWRtaW5fcHJvdmluY2UiLCJyb2xlSWQiOiJiNDJhOTU3Zi1lYzI2LTQ3MmEtYmRmOC00OWNhZTY2ZTc0YTYifQ.SdcCgx_bgpOm2k4njGKiPA...</msg>
+<status status="PASS" starttime="20230106 11:29:18.723" endtime="20230106 11:29:18.737"/>
+</kw>
+<kw name="Get From List" library="Collections">
+<var>${token}</var>
+<arg>${token_list}</arg>
+<arg>0</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<msg timestamp="20230106 11:29:18.737" level="INFO">${token} = eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2NzI5ODI5NTgsInVzZXJuYW1lIjoiaG5pX21hbmFnZXIiLCJyb2xlIjoiYWRtaW5fcHJvdmluY2UiLCJyb2xlSWQiOiJiNDJhOTU3Zi1lYzI2LTQ3MmEtYmRmOC00OWNhZTY2ZTc0YTYifQ.SdcCgx_bgpOm2k4njGKiPAA6...</msg>
+<status status="PASS" starttime="20230106 11:29:18.737" endtime="20230106 11:29:18.737"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>${response.status_code}</arg>
+<arg>${token}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20230105 23:04:17.702" endtime="20230105 23:04:17.702"/>
+<status status="PASS" starttime="20230106 11:29:18.738" endtime="20230106 11:29:18.738"/>
 </kw>
-<status status="FAIL" starttime="20230105 23:04:17.686" endtime="20230105 23:04:17.702">HTTPError: 405 Client Error: Not Allowed for url: http://171.244.173.203/xsign-admin/login</status>
+<kw name="Status Should Be" library="RequestsLibrary">
+<arg>200</arg>
+<arg>${resp}</arg>
+<doc>Fails if response status code is different than the expected.</doc>
+<status status="PASS" starttime="20230106 11:29:18.738" endtime="20230106 11:29:18.738"/>
+</kw>
+<status status="PASS" starttime="20230106 11:29:18.461" endtime="20230106 11:29:18.738"/>
 </test>
-<status status="FAIL" starttime="20230105 23:04:17.568" endtime="20230105 23:04:17.702"/>
+<status status="PASS" starttime="20230106 11:29:18.389" endtime="20230106 11:29:18.738"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Test Api Login">Test Api Login</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test Api Login">Test Api Login</stat>
 </suite>
 </statistics>
 <errors>
