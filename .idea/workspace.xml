@@ -1,27 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2c71941-2927-431e-b991-fe42e777643d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Robot Framework/API testing/first_test.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Robot Framework/API testing/test_api_login/test_api_login" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Robot Framework/test_with_appiumlibrary/test_login/resource.robot" afterDir="false" />
+    <list default="true" id="b349ee0f-7b04-41be-9025-155a2a222136" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robot Framework/API testing/test_api_login/test_api_login" beforeDir="false" afterPath="$PROJECT_DIR$/Robot Framework/API testing/test_api_login/test_api_login.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robot Framework/test_xsign_web/login test/invalid_login.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Robot Framework/test_xsign_web/login test/invalid_login.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robot Framework/test_xsign_web/login test/resource.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Robot Framework/test_xsign_web/login test/resource.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robot Framework/test_xsign_web/login test/valid_login.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Robot Framework/test_xsign_web/login test/valid_login.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robot Framework/test_xsign_web/test_consistency_selected_users/resource.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Robot Framework/test_xsign_web/test_consistency_selected_users/resource.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Robot Framework/test_xsign_web/test_consistency_selected_users/test_consistency_selected_user.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Robot Framework/test_xsign_web/test_consistency_selected_users/test_consistency_selected_user.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Robot Resource File" />
-        <option value="Robot Feature File" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,8 +23,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2Jrry2QQLK7yn4p0G9lKnY1zZnA" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2Jvpjcg2y4VH8jEFzWbRLbalute" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -39,37 +32,19 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Working Space/AutoTesting&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+    &quot;last_opened_file_path&quot;: &quot;/home/vtn-thaontv/workspace/AutoTesting&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Working Space\AutoTesting\Robot Framework\test_xsign_web\login test" />
-    </key>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e2c71941-2927-431e-b991-fe42e777643d" name="Changes" comment="" />
-      <created>1672847293539</created>
+      <changelist id="b349ee0f-7b04-41be-9025-155a2a222136" name="Changes" comment="" />
+      <created>1672968568736</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1672847293539</updated>
-      <workItem from="1672847294893" duration="2954000" />
-      <workItem from="1672931877627" duration="294000" />
-      <workItem from="1672932181411" duration="2332000" />
+      <updated>1672968568736</updated>
     </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
