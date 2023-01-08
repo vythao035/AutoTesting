@@ -1,17 +1,15 @@
-***Settings***
-Library     AppiumLibrary
+*** Settings ***
+Library  AppiumLibrary
+Library  BuiltIn
 
-***Keywords***
 
-Open Session
-    Set Appium Timeout  5
-    Open Application    http://localhost:4723/wd/hub
-    ...                 automationName=UiAutomator2
-    ...                 platformName=Android
-    ...                 deviceName=EmulatorPixel4
-    ...                 app=${EXECDIR}/app/twp.apk
-    ...                 udid=emulator-5554
-    Get Started
-Close Session
-    Capture Page Screenshot
-    Close Application
+*** Variables ***
+${DEVICE_NAME}    emulator-5554
+${ANDROID_APP}                ${CURDIR}/../app/xsign.apk
+${ANDROID_PLATFORM_NAME}      Android
+${ANDROID_PLATFORM_VERSION}   %{ANDROID_PLATFORM_VERSION=11}
+
+*** Test Cases ***
+Open Android Test App
+  open application  http://localhost:4723/wd/hub  deviceName=${DEVICE_NAME}
+  ...  app=${ANDROID_APP}  platformName=${ANDROID_PLATFORM_NAME}  platformVersion=${ANDROID_PLATFORM_VERSION}
