@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.9.12 on linux)" generated="20230203 17:25:32.128" rpa="false" schemaversion="3">
+<suite id="s1" name="Test Docs Management" source="/home/vtn-thaontv/workspace/2023/AutoTesting/Robot Framework/Test_VCar/test_docs_management.robot">
+<test id="s1-t1" name="Document_4" line="29">
+<kw name="Open Personal Docmentation Management" library="resource" type="SETUP">
+<kw name="Open Android Test App" library="resource">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>10</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20230203 17:25:32.254" endtime="20230203 17:25:32.254"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://127.0.0.1:4723/wd/hub</arg>
+<arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
+<arg>app=${ANDROID_APP}</arg>
+<arg>platformName=${ANDROID_PLATFORM_NAME}</arg>
+<arg>platformVersion=${ANDROID_PLATFORM_VERSION}</arg>
+<arg>appPackage=${ANDROID_APP_PACKAGE}</arg>
+<arg>appActivity=${ANDROID_APP_ACTIVITY}</arg>
+<arg>noReset=${True}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" starttime="20230203 17:25:32.255" endtime="20230203 17:25:38.292"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230203 17:25:40.293" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230203 17:25:38.292" endtime="20230203 17:25:40.293"/>
+</kw>
+<status status="PASS" starttime="20230203 17:25:32.254" endtime="20230203 17:25:40.293"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${Menu Button}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230203 17:25:52.259" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[6]
+xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[6]
+xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[6]
+xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[6]</msg>
+<status status="PASS" starttime="20230203 17:25:40.294" endtime="20230203 17:25:52.259"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Menu Button}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230203 17:25:52.260" level="INFO">Clicking element '//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[6]'.</msg>
+<msg timestamp="20230203 17:26:32.929" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[6]</msg>
+<status status="PASS" starttime="20230203 17:25:52.259" endtime="20230203 17:26:32.929"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${Docs Management}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230203 17:26:43.490" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230203 17:26:32.929" endtime="20230203 17:26:43.490"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Docs Management}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230203 17:26:43.492" level="INFO">Clicking element '//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.TextView'.</msg>
+<msg timestamp="20230203 17:27:24.461" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230203 17:26:43.491" endtime="20230203 17:27:24.461"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230203 17:27:29.462" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230203 17:27:24.461" endtime="20230203 17:27:29.462"/>
+</kw>
+<status status="PASS" starttime="20230203 17:25:32.254" endtime="20230203 17:27:29.462"/>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${Num Docs}</var>
+<arg>${Num Docs Element}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20230203 17:27:59.913" level="INFO">Element '//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView' text is '2 giấy tờ ' </msg>
+<msg timestamp="20230203 17:27:59.913" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView</msg>
+<msg timestamp="20230203 17:27:59.913" level="INFO">${Num Docs} = 2 giấy tờ </msg>
+<status status="PASS" starttime="20230203 17:27:29.462" endtime="20230203 17:27:59.913"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Num Docs}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230203 17:27:59.914" endtime="20230203 17:27:59.914"/>
+</kw>
+<kw name="Split String" library="String">
+<var>${Num Docs}</var>
+<arg>${Num Docs}</arg>
+<arg>${SPACE}</arg>
+<arg>0</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20230203 17:27:59.914" level="INFO">${Num Docs} = ['2 giấy tờ ']</msg>
+<status status="PASS" starttime="20230203 17:27:59.914" endtime="20230203 17:27:59.914"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Num Docs}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230203 17:27:59.914" endtime="20230203 17:27:59.915"/>
+</kw>
+<status status="PASS" starttime="20230203 17:25:32.253" endtime="20230203 17:27:59.915"/>
+</test>
+<status status="PASS" starttime="20230203 17:25:32.129" endtime="20230203 17:27:59.915"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Test Docs Management">Test Docs Management</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
