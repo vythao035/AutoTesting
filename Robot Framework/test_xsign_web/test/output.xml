@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.9.12 on linux)" generated="20230111 16:47:01.993" rpa="false" schemaversion="3">
+<suite id="s1" name="Window" source="/home/vtn-thaontv/workspace/AutoTesting/Robot Framework/test_xsign_web/test/window.robot">
+<test id="s1-t1" name="Log Location" line="86">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url=${REPO_URL}</arg>
+<arg>browser=Chrome</arg>
+<arg>executable_path=./driver/chromedriver</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230111 16:47:02.132" level="INFO">Opening browser 'Chrome' to base url 'https://github.com/vythao035/AutoTesting/tree/master'.</msg>
+<status status="PASS" starttime="20230111 16:47:02.131" endtime="20230111 16:47:05.052"/>
+</kw>
+<kw name="Log Location" library="SeleniumLibrary">
+<doc>Logs and returns the current browser window URL.</doc>
+<msg timestamp="20230111 16:47:05.056" level="INFO">https://github.com/vythao035/AutoTesting/tree/master</msg>
+<status status="PASS" starttime="20230111 16:47:05.053" endtime="20230111 16:47:05.056"/>
+</kw>
+<status status="PASS" starttime="20230111 16:47:02.131" endtime="20230111 16:47:05.056"/>
+</test>
+<status status="PASS" starttime="20230111 16:47:01.993" endtime="20230111 16:47:05.056"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Window">Window</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
