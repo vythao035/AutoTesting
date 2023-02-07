@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.12 on linux)" generated="20230203 17:25:32.128" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.9.12 on linux)" generated="20230207 10:23:46.125" rpa="false" schemaversion="3">
 <suite id="s1" name="Test Docs Management" source="/home/vtn-thaontv/workspace/2023/AutoTesting/Robot Framework/Test_VCar/test_docs_management.robot">
-<test id="s1-t1" name="Document_4" line="29">
+<test id="s1-t1" name="Document_33" line="500">
 <kw name="Open Personal Docmentation Management" library="resource" type="SETUP">
 <kw name="Open Android Test App" library="resource">
 <kw name="Set Appium Timeout" library="AppiumLibrary">
 <arg>10</arg>
 <doc>Sets the timeout in seconds used by various keywords.</doc>
-<status status="PASS" starttime="20230203 17:25:32.254" endtime="20230203 17:25:32.254"/>
+<status status="PASS" starttime="20230207 10:23:46.253" endtime="20230207 10:23:46.253"/>
 </kw>
 <kw name="Open Application" library="AppiumLibrary">
 <arg>http://127.0.0.1:4723/wd/hub</arg>
 <arg>automationName=${ANDROID_AUTOMATION_NAME}</arg>
-<arg>app=${ANDROID_APP}</arg>
+<arg>deviceName=${ANDROID_DEVICE_NAME}</arg>
 <arg>platformName=${ANDROID_PLATFORM_NAME}</arg>
 <arg>platformVersion=${ANDROID_PLATFORM_VERSION}</arg>
 <arg>appPackage=${ANDROID_APP_PACKAGE}</arg>
 <arg>appActivity=${ANDROID_APP_ACTIVITY}</arg>
 <arg>noReset=${True}</arg>
+<arg>fullReset=${False}</arg>
+<arg>ignoreHiddenApiPolicyError=${True}</arg>
 <doc>Opens a new application to given Appium server.
 Capabilities of appium server, Android and iOS,
 Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
@@ -25,84 +27,770 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="PASS" starttime="20230203 17:25:32.255" endtime="20230203 17:25:38.292"/>
+<status status="PASS" starttime="20230207 10:23:46.253" endtime="20230207 10:23:53.993"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230203 17:25:40.293" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230203 17:25:38.292" endtime="20230203 17:25:40.293"/>
+<msg timestamp="20230207 10:23:55.993" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230207 10:23:53.993" endtime="20230207 10:23:55.993"/>
 </kw>
-<status status="PASS" starttime="20230203 17:25:32.254" endtime="20230203 17:25:40.293"/>
+<status status="PASS" starttime="20230207 10:23:46.252" endtime="20230207 10:23:55.993"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="AppiumLibrary">
 <arg>${Menu Button}</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<msg timestamp="20230203 17:25:52.259" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[6]
-xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[6]
-xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[6]
-xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[6]</msg>
-<status status="PASS" starttime="20230203 17:25:40.294" endtime="20230203 17:25:52.259"/>
+<msg timestamp="20230207 10:23:59.333" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[6]</msg>
+<status status="PASS" starttime="20230207 10:23:55.993" endtime="20230207 10:23:59.333"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>${Menu Button}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20230203 17:25:52.260" level="INFO">Clicking element '//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[6]'.</msg>
-<msg timestamp="20230203 17:26:32.929" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[6]</msg>
-<status status="PASS" starttime="20230203 17:25:52.259" endtime="20230203 17:26:32.929"/>
+<msg timestamp="20230207 10:23:59.335" level="INFO">Clicking element '//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[6]'.</msg>
+<msg timestamp="20230207 10:23:59.616" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[6]</msg>
+<status status="PASS" starttime="20230207 10:23:59.333" endtime="20230207 10:23:59.616"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="AppiumLibrary">
 <arg>${Docs Management}</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<msg timestamp="20230203 17:26:43.490" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.TextView</msg>
-<status status="PASS" starttime="20230203 17:26:32.929" endtime="20230203 17:26:43.490"/>
+<msg timestamp="20230207 10:24:01.400" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.TextView
+xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230207 10:23:59.616" endtime="20230207 10:24:01.400"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>${Docs Management}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20230203 17:26:43.492" level="INFO">Clicking element '//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.TextView'.</msg>
-<msg timestamp="20230203 17:27:24.461" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.TextView</msg>
-<status status="PASS" starttime="20230203 17:26:43.491" endtime="20230203 17:27:24.461"/>
+<msg timestamp="20230207 10:24:01.402" level="INFO">Clicking element '//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.TextView'.</msg>
+<msg timestamp="20230207 10:24:01.636" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230207 10:24:01.400" endtime="20230207 10:24:01.636"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230203 17:27:29.462" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230203 17:27:24.461" endtime="20230203 17:27:29.462"/>
+<msg timestamp="20230207 10:24:06.637" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230207 10:24:01.637" endtime="20230207 10:24:06.637"/>
 </kw>
-<status status="PASS" starttime="20230203 17:25:32.254" endtime="20230203 17:27:29.462"/>
+<status status="PASS" starttime="20230207 10:23:46.252" endtime="20230207 10:24:06.637"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Choose Date Field}</var>
+<arg>//hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230207 10:24:06.638" level="INFO">${Choose Date Field} = //hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayo...</msg>
+<status status="PASS" starttime="20230207 10:24:06.637" endtime="20230207 10:24:06.638"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Current Year Element}</var>
+<arg>//hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[3]/android.widget.EditText</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230207 10:24:06.638" level="INFO">${Current Year Element} = //hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayo...</msg>
+<status status="PASS" starttime="20230207 10:24:06.638" endtime="20230207 10:24:06.638"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Current Month Element}</var>
+<arg>//hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[2]/android.widget.EditText</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230207 10:24:06.638" level="INFO">${Current Month Element} = //hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayo...</msg>
+<status status="PASS" starttime="20230207 10:24:06.638" endtime="20230207 10:24:06.638"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Current Day Element}</var>
+<arg>//hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[1]/android.widget.EditText</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230207 10:24:06.639" level="INFO">${Current Day Element} = //hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayo...</msg>
+<status status="PASS" starttime="20230207 10:24:06.638" endtime="20230207 10:24:06.639"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Input Start Datetime}</var>
+<arg>"2022-12-27"</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230207 10:24:06.639" level="INFO">${Input Start Datetime} = "2022-12-27"</msg>
+<status status="PASS" starttime="20230207 10:24:06.639" endtime="20230207 10:24:06.639"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${Accept Time}</var>
+<arg>//hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.Button[2]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230207 10:24:06.639" level="INFO">${Accept Time} = //hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.Button[2]</msg>
+<status status="PASS" starttime="20230207 10:24:06.639" endtime="20230207 10:24:06.639"/>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<var>${Input Start Datetime}</var>
+<arg>${Input Start Datetime}</arg>
+<arg>datetime</arg>
+<doc>Converts between supported `date formats`.</doc>
+<msg timestamp="20230207 10:24:06.641" level="INFO">${Input Start Datetime} = 2022-12-27 00:00:00</msg>
+<status status="PASS" starttime="20230207 10:24:06.639" endtime="20230207 10:24:06.641"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Input Start Datetime}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230207 10:24:06.641" endtime="20230207 10:24:06.641"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Create New Doc Button}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230207 10:24:06.643" level="INFO">Clicking element '//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.ImageView'.</msg>
+<msg timestamp="20230207 10:24:06.808" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.ImageView</msg>
+<status status="PASS" starttime="20230207 10:24:06.641" endtime="20230207 10:24:06.808"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${Window Create Doc Title Element}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230207 10:24:07.942" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView
+xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230207 10:24:06.808" endtime="20230207 10:24:07.942"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Start Datetime}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230207 10:24:07.945" level="INFO">Clicking element '//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup/android.widget.TextView'.</msg>
+<msg timestamp="20230207 10:24:08.129" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup/android.widget.TextView</msg>
+<status status="PASS" starttime="20230207 10:24:07.943" endtime="20230207 10:24:08.129"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${Choose Date Field}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<msg timestamp="20230207 10:24:08.771" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout
+xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout</msg>
+<status status="PASS" starttime="20230207 10:24:08.129" endtime="20230207 10:24:08.771"/>
+</kw>
+<while condition="${True}">
+<iter>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${Current Year}</var>
+<arg>${Current Year Element}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20230207 10:24:08.837" level="INFO">Element '//hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[3]/android.widget.EditText' text is '2023' </msg>
+<msg timestamp="20230207 10:24:08.837" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[3]/android.widget.EditText</msg>
+<msg timestamp="20230207 10:24:08.837" level="INFO">${Current Year} = 2023</msg>
+<status status="PASS" starttime="20230207 10:24:08.772" endtime="20230207 10:24:08.838"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Current Year}&quot;==&quot;${Input Start Datetime.year}&quot;">
+<break>
+<status status="NOT RUN" starttime="20230207 10:24:08.838" endtime="20230207 10:24:08.838"/>
+</break>
+<status status="NOT RUN" starttime="20230207 10:24:08.838" endtime="20230207 10:24:08.838"/>
+</branch>
+<branch type="ELSE">
+<kw name="Swipe" library="AppiumLibrary">
+<arg>${700}</arg>
+<arg>${990}</arg>
+<arg>${700}</arg>
+<arg>${1200}</arg>
+<arg>${500}</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20230207 10:24:08.839" endtime="20230207 10:24:09.646"/>
+</kw>
+<status status="PASS" starttime="20230207 10:24:08.838" endtime="20230207 10:24:09.646"/>
+</branch>
+<status status="PASS" starttime="20230207 10:24:08.838" endtime="20230207 10:24:09.646"/>
+</if>
+<status status="PASS" starttime="20230207 10:24:08.771" endtime="20230207 10:24:09.646"/>
+</iter>
+<iter>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${Current Year}</var>
+<arg>${Current Year Element}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20230207 10:24:10.798" level="INFO">Element '//hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[3]/android.widget.EditText' text is '2022' </msg>
+<msg timestamp="20230207 10:24:10.798" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[3]/android.widget.EditText</msg>
+<msg timestamp="20230207 10:24:10.798" level="INFO">${Current Year} = 2022</msg>
+<status status="PASS" starttime="20230207 10:24:09.647" endtime="20230207 10:24:10.798"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Current Year}&quot;==&quot;${Input Start Datetime.year}&quot;">
+<break>
+<status status="PASS" starttime="20230207 10:24:10.798" endtime="20230207 10:24:10.798"/>
+</break>
+<status status="PASS" starttime="20230207 10:24:10.798" endtime="20230207 10:24:10.798"/>
+</branch>
+<branch type="ELSE">
+<kw name="Swipe" library="AppiumLibrary">
+<arg>${700}</arg>
+<arg>${990}</arg>
+<arg>${700}</arg>
+<arg>${1200}</arg>
+<arg>${500}</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="NOT RUN" starttime="20230207 10:24:10.799" endtime="20230207 10:24:10.799"/>
+</kw>
+<status status="NOT RUN" starttime="20230207 10:24:10.799" endtime="20230207 10:24:10.799"/>
+</branch>
+<status status="PASS" starttime="20230207 10:24:10.798" endtime="20230207 10:24:10.799"/>
+</if>
+<status status="PASS" starttime="20230207 10:24:09.646" endtime="20230207 10:24:10.799"/>
+</iter>
+<status status="PASS" starttime="20230207 10:24:08.771" endtime="20230207 10:24:10.799"/>
+</while>
+<while condition="${True}">
+<iter>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${Current Month}</var>
+<arg>${Current Month Element}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20230207 10:24:10.870" level="INFO">Element '//hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[2]/android.widget.EditText' text is 'Tháng 2' </msg>
+<msg timestamp="20230207 10:24:10.870" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[2]/android.widget.EditText</msg>
+<msg timestamp="20230207 10:24:10.870" level="INFO">${Current Month} = Tháng 2</msg>
+<status status="PASS" starttime="20230207 10:24:10.799" endtime="20230207 10:24:10.870"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Current Month}&quot;==&quot;Tháng ${Input Start Datetime.month}&quot;">
+<break>
+<status status="NOT RUN" starttime="20230207 10:24:10.872" endtime="20230207 10:24:10.872"/>
+</break>
+<status status="NOT RUN" starttime="20230207 10:24:10.870" endtime="20230207 10:24:10.872"/>
+</branch>
+<branch type="ELSE">
+<kw name="Swipe" library="AppiumLibrary">
+<arg>${500}</arg>
+<arg>${990}</arg>
+<arg>${500}</arg>
+<arg>${1200}</arg>
+<arg>${500}</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20230207 10:24:10.872" endtime="20230207 10:24:11.674"/>
+</kw>
+<status status="PASS" starttime="20230207 10:24:10.872" endtime="20230207 10:24:11.675"/>
+</branch>
+<status status="PASS" starttime="20230207 10:24:10.870" endtime="20230207 10:24:11.675"/>
+</if>
+<status status="PASS" starttime="20230207 10:24:10.799" endtime="20230207 10:24:11.675"/>
+</iter>
+<iter>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${Current Month}</var>
+<arg>${Current Month Element}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20230207 10:24:12.807" level="INFO">Element '//hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[2]/android.widget.EditText' text is 'Tháng 1' </msg>
+<msg timestamp="20230207 10:24:12.807" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[2]/android.widget.EditText</msg>
+<msg timestamp="20230207 10:24:12.807" level="INFO">${Current Month} = Tháng 1</msg>
+<status status="PASS" starttime="20230207 10:24:11.675" endtime="20230207 10:24:12.807"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Current Month}&quot;==&quot;Tháng ${Input Start Datetime.month}&quot;">
+<break>
+<status status="NOT RUN" starttime="20230207 10:24:12.808" endtime="20230207 10:24:12.808"/>
+</break>
+<status status="NOT RUN" starttime="20230207 10:24:12.807" endtime="20230207 10:24:12.808"/>
+</branch>
+<branch type="ELSE">
+<kw name="Swipe" library="AppiumLibrary">
+<arg>${500}</arg>
+<arg>${990}</arg>
+<arg>${500}</arg>
+<arg>${1200}</arg>
+<arg>${500}</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20230207 10:24:12.808" endtime="20230207 10:24:13.610"/>
+</kw>
+<status status="PASS" starttime="20230207 10:24:12.808" endtime="20230207 10:24:13.610"/>
+</branch>
+<status status="PASS" starttime="20230207 10:24:12.807" endtime="20230207 10:24:13.610"/>
+</if>
+<status status="PASS" starttime="20230207 10:24:11.675" endtime="20230207 10:24:13.610"/>
+</iter>
+<iter>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${Current Month}</var>
+<arg>${Current Month Element}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20230207 10:24:14.754" level="INFO">Element '//hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[2]/android.widget.EditText' text is 'Tháng 12' </msg>
+<msg timestamp="20230207 10:24:14.754" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[2]/android.widget.EditText</msg>
+<msg timestamp="20230207 10:24:14.755" level="INFO">${Current Month} = Tháng 12</msg>
+<status status="PASS" starttime="20230207 10:24:13.611" endtime="20230207 10:24:14.755"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Current Month}&quot;==&quot;Tháng ${Input Start Datetime.month}&quot;">
+<break>
+<status status="PASS" starttime="20230207 10:24:14.756" endtime="20230207 10:24:14.756"/>
+</break>
+<status status="PASS" starttime="20230207 10:24:14.755" endtime="20230207 10:24:14.756"/>
+</branch>
+<branch type="ELSE">
+<kw name="Swipe" library="AppiumLibrary">
+<arg>${500}</arg>
+<arg>${990}</arg>
+<arg>${500}</arg>
+<arg>${1200}</arg>
+<arg>${500}</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="NOT RUN" starttime="20230207 10:24:14.756" endtime="20230207 10:24:14.756"/>
+</kw>
+<status status="NOT RUN" starttime="20230207 10:24:14.756" endtime="20230207 10:24:14.756"/>
+</branch>
+<status status="PASS" starttime="20230207 10:24:14.755" endtime="20230207 10:24:14.756"/>
+</if>
+<status status="PASS" starttime="20230207 10:24:13.610" endtime="20230207 10:24:14.756"/>
+</iter>
+<status status="PASS" starttime="20230207 10:24:10.799" endtime="20230207 10:24:14.756"/>
+</while>
+<while condition="${True}">
+<iter>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${Current Day}</var>
+<arg>${Current Day Element}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20230207 10:24:14.823" level="INFO">Element '//hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[1]/android.widget.EditText' text is '7' </msg>
+<msg timestamp="20230207 10:24:14.824" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[1]/android.widget.EditText</msg>
+<msg timestamp="20230207 10:24:14.824" level="INFO">${Current Day} = 7</msg>
+<status status="PASS" starttime="20230207 10:24:14.757" endtime="20230207 10:24:14.824"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Current Day}&quot;==&quot;${Input Start Datetime.day}&quot;">
+<break>
+<status status="NOT RUN" starttime="20230207 10:24:14.825" endtime="20230207 10:24:14.825"/>
+</break>
+<status status="NOT RUN" starttime="20230207 10:24:14.824" endtime="20230207 10:24:14.825"/>
+</branch>
+<branch type="ELSE">
+<kw name="Swipe" library="AppiumLibrary">
+<arg>${300}</arg>
+<arg>${990}</arg>
+<arg>${300}</arg>
+<arg>${1200}</arg>
+<arg>${500}</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20230207 10:24:14.825" endtime="20230207 10:24:15.626"/>
+</kw>
+<status status="PASS" starttime="20230207 10:24:14.825" endtime="20230207 10:24:15.626"/>
+</branch>
+<status status="PASS" starttime="20230207 10:24:14.824" endtime="20230207 10:24:15.626"/>
+</if>
+<status status="PASS" starttime="20230207 10:24:14.756" endtime="20230207 10:24:15.626"/>
+</iter>
+<iter>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${Current Day}</var>
+<arg>${Current Day Element}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20230207 10:24:17.227" level="INFO">Element '//hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[1]/android.widget.EditText' text is '6' </msg>
+<msg timestamp="20230207 10:24:17.227" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[1]/android.widget.EditText</msg>
+<msg timestamp="20230207 10:24:17.227" level="INFO">${Current Day} = 6</msg>
+<status status="PASS" starttime="20230207 10:24:15.626" endtime="20230207 10:24:17.227"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Current Day}&quot;==&quot;${Input Start Datetime.day}&quot;">
+<break>
+<status status="NOT RUN" starttime="20230207 10:24:17.228" endtime="20230207 10:24:17.228"/>
+</break>
+<status status="NOT RUN" starttime="20230207 10:24:17.227" endtime="20230207 10:24:17.228"/>
+</branch>
+<branch type="ELSE">
+<kw name="Swipe" library="AppiumLibrary">
+<arg>${300}</arg>
+<arg>${990}</arg>
+<arg>${300}</arg>
+<arg>${1200}</arg>
+<arg>${500}</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20230207 10:24:17.228" endtime="20230207 10:24:18.026"/>
+</kw>
+<status status="PASS" starttime="20230207 10:24:17.228" endtime="20230207 10:24:18.026"/>
+</branch>
+<status status="PASS" starttime="20230207 10:24:17.227" endtime="20230207 10:24:18.026"/>
+</if>
+<status status="PASS" starttime="20230207 10:24:15.626" endtime="20230207 10:24:18.026"/>
+</iter>
+<iter>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${Current Day}</var>
+<arg>${Current Day Element}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20230207 10:24:19.084" level="INFO">Element '//hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[1]/android.widget.EditText' text is '5' </msg>
+<msg timestamp="20230207 10:24:19.084" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[1]/android.widget.EditText</msg>
+<msg timestamp="20230207 10:24:19.084" level="INFO">${Current Day} = 5</msg>
+<status status="PASS" starttime="20230207 10:24:18.026" endtime="20230207 10:24:19.084"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Current Day}&quot;==&quot;${Input Start Datetime.day}&quot;">
+<break>
+<status status="NOT RUN" starttime="20230207 10:24:19.085" endtime="20230207 10:24:19.085"/>
+</break>
+<status status="NOT RUN" starttime="20230207 10:24:19.084" endtime="20230207 10:24:19.085"/>
+</branch>
+<branch type="ELSE">
+<kw name="Swipe" library="AppiumLibrary">
+<arg>${300}</arg>
+<arg>${990}</arg>
+<arg>${300}</arg>
+<arg>${1200}</arg>
+<arg>${500}</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20230207 10:24:19.085" endtime="20230207 10:24:19.887"/>
+</kw>
+<status status="PASS" starttime="20230207 10:24:19.085" endtime="20230207 10:24:19.887"/>
+</branch>
+<status status="PASS" starttime="20230207 10:24:19.084" endtime="20230207 10:24:19.887"/>
+</if>
+<status status="PASS" starttime="20230207 10:24:18.026" endtime="20230207 10:24:19.887"/>
+</iter>
+<iter>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${Current Day}</var>
+<arg>${Current Day Element}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20230207 10:24:20.944" level="INFO">Element '//hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[1]/android.widget.EditText' text is '4' </msg>
+<msg timestamp="20230207 10:24:20.944" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[1]/android.widget.EditText</msg>
+<msg timestamp="20230207 10:24:20.944" level="INFO">${Current Day} = 4</msg>
+<status status="PASS" starttime="20230207 10:24:19.887" endtime="20230207 10:24:20.944"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Current Day}&quot;==&quot;${Input Start Datetime.day}&quot;">
+<break>
+<status status="NOT RUN" starttime="20230207 10:24:20.945" endtime="20230207 10:24:20.945"/>
+</break>
+<status status="NOT RUN" starttime="20230207 10:24:20.944" endtime="20230207 10:24:20.945"/>
+</branch>
+<branch type="ELSE">
+<kw name="Swipe" library="AppiumLibrary">
+<arg>${300}</arg>
+<arg>${990}</arg>
+<arg>${300}</arg>
+<arg>${1200}</arg>
+<arg>${500}</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20230207 10:24:20.945" endtime="20230207 10:24:21.766"/>
+</kw>
+<status status="PASS" starttime="20230207 10:24:20.945" endtime="20230207 10:24:21.766"/>
+</branch>
+<status status="PASS" starttime="20230207 10:24:20.944" endtime="20230207 10:24:21.766"/>
+</if>
+<status status="PASS" starttime="20230207 10:24:19.887" endtime="20230207 10:24:21.766"/>
+</iter>
+<iter>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${Current Day}</var>
+<arg>${Current Day Element}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20230207 10:24:22.941" level="INFO">Element '//hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[1]/android.widget.EditText' text is '3' </msg>
+<msg timestamp="20230207 10:24:22.941" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[1]/android.widget.EditText</msg>
+<msg timestamp="20230207 10:24:22.941" level="INFO">${Current Day} = 3</msg>
+<status status="PASS" starttime="20230207 10:24:21.766" endtime="20230207 10:24:22.941"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Current Day}&quot;==&quot;${Input Start Datetime.day}&quot;">
+<break>
+<status status="NOT RUN" starttime="20230207 10:24:22.942" endtime="20230207 10:24:22.942"/>
+</break>
+<status status="NOT RUN" starttime="20230207 10:24:22.941" endtime="20230207 10:24:22.942"/>
+</branch>
+<branch type="ELSE">
+<kw name="Swipe" library="AppiumLibrary">
+<arg>${300}</arg>
+<arg>${990}</arg>
+<arg>${300}</arg>
+<arg>${1200}</arg>
+<arg>${500}</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20230207 10:24:22.942" endtime="20230207 10:24:23.742"/>
+</kw>
+<status status="PASS" starttime="20230207 10:24:22.942" endtime="20230207 10:24:23.742"/>
+</branch>
+<status status="PASS" starttime="20230207 10:24:22.941" endtime="20230207 10:24:23.742"/>
+</if>
+<status status="PASS" starttime="20230207 10:24:21.766" endtime="20230207 10:24:23.742"/>
+</iter>
+<iter>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${Current Day}</var>
+<arg>${Current Day Element}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20230207 10:24:24.794" level="INFO">Element '//hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[1]/android.widget.EditText' text is '2' </msg>
+<msg timestamp="20230207 10:24:24.794" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[1]/android.widget.EditText</msg>
+<msg timestamp="20230207 10:24:24.794" level="INFO">${Current Day} = 2</msg>
+<status status="PASS" starttime="20230207 10:24:23.742" endtime="20230207 10:24:24.795"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Current Day}&quot;==&quot;${Input Start Datetime.day}&quot;">
+<break>
+<status status="NOT RUN" starttime="20230207 10:24:24.796" endtime="20230207 10:24:24.796"/>
+</break>
+<status status="NOT RUN" starttime="20230207 10:24:24.795" endtime="20230207 10:24:24.796"/>
+</branch>
+<branch type="ELSE">
+<kw name="Swipe" library="AppiumLibrary">
+<arg>${300}</arg>
+<arg>${990}</arg>
+<arg>${300}</arg>
+<arg>${1200}</arg>
+<arg>${500}</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20230207 10:24:24.796" endtime="20230207 10:24:25.596"/>
+</kw>
+<status status="PASS" starttime="20230207 10:24:24.796" endtime="20230207 10:24:25.596"/>
+</branch>
+<status status="PASS" starttime="20230207 10:24:24.795" endtime="20230207 10:24:25.596"/>
+</if>
+<status status="PASS" starttime="20230207 10:24:23.742" endtime="20230207 10:24:25.596"/>
+</iter>
+<iter>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${Current Day}</var>
+<arg>${Current Day Element}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20230207 10:24:26.729" level="INFO">Element '//hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[1]/android.widget.EditText' text is '1' </msg>
+<msg timestamp="20230207 10:24:26.729" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[1]/android.widget.EditText</msg>
+<msg timestamp="20230207 10:24:26.729" level="INFO">${Current Day} = 1</msg>
+<status status="PASS" starttime="20230207 10:24:25.596" endtime="20230207 10:24:26.729"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Current Day}&quot;==&quot;${Input Start Datetime.day}&quot;">
+<break>
+<status status="NOT RUN" starttime="20230207 10:24:26.730" endtime="20230207 10:24:26.730"/>
+</break>
+<status status="NOT RUN" starttime="20230207 10:24:26.729" endtime="20230207 10:24:26.730"/>
+</branch>
+<branch type="ELSE">
+<kw name="Swipe" library="AppiumLibrary">
+<arg>${300}</arg>
+<arg>${990}</arg>
+<arg>${300}</arg>
+<arg>${1200}</arg>
+<arg>${500}</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20230207 10:24:26.730" endtime="20230207 10:24:27.534"/>
+</kw>
+<status status="PASS" starttime="20230207 10:24:26.730" endtime="20230207 10:24:27.534"/>
+</branch>
+<status status="PASS" starttime="20230207 10:24:26.729" endtime="20230207 10:24:27.534"/>
+</if>
+<status status="PASS" starttime="20230207 10:24:25.596" endtime="20230207 10:24:27.534"/>
+</iter>
+<iter>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${Current Day}</var>
+<arg>${Current Day Element}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20230207 10:24:28.688" level="INFO">Element '//hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[1]/android.widget.EditText' text is '31' </msg>
+<msg timestamp="20230207 10:24:28.688" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[1]/android.widget.EditText</msg>
+<msg timestamp="20230207 10:24:28.688" level="INFO">${Current Day} = 31</msg>
+<status status="PASS" starttime="20230207 10:24:27.534" endtime="20230207 10:24:28.688"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Current Day}&quot;==&quot;${Input Start Datetime.day}&quot;">
+<break>
+<status status="NOT RUN" starttime="20230207 10:24:28.689" endtime="20230207 10:24:28.689"/>
+</break>
+<status status="NOT RUN" starttime="20230207 10:24:28.688" endtime="20230207 10:24:28.689"/>
+</branch>
+<branch type="ELSE">
+<kw name="Swipe" library="AppiumLibrary">
+<arg>${300}</arg>
+<arg>${990}</arg>
+<arg>${300}</arg>
+<arg>${1200}</arg>
+<arg>${500}</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20230207 10:24:28.689" endtime="20230207 10:24:29.492"/>
+</kw>
+<status status="PASS" starttime="20230207 10:24:28.689" endtime="20230207 10:24:29.492"/>
+</branch>
+<status status="PASS" starttime="20230207 10:24:28.688" endtime="20230207 10:24:29.492"/>
+</if>
+<status status="PASS" starttime="20230207 10:24:27.534" endtime="20230207 10:24:29.492"/>
+</iter>
+<iter>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${Current Day}</var>
+<arg>${Current Day Element}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20230207 10:24:30.645" level="INFO">Element '//hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[1]/android.widget.EditText' text is '30' </msg>
+<msg timestamp="20230207 10:24:30.645" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[1]/android.widget.EditText</msg>
+<msg timestamp="20230207 10:24:30.645" level="INFO">${Current Day} = 30</msg>
+<status status="PASS" starttime="20230207 10:24:29.492" endtime="20230207 10:24:30.645"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Current Day}&quot;==&quot;${Input Start Datetime.day}&quot;">
+<break>
+<status status="NOT RUN" starttime="20230207 10:24:30.646" endtime="20230207 10:24:30.646"/>
+</break>
+<status status="NOT RUN" starttime="20230207 10:24:30.645" endtime="20230207 10:24:30.646"/>
+</branch>
+<branch type="ELSE">
+<kw name="Swipe" library="AppiumLibrary">
+<arg>${300}</arg>
+<arg>${990}</arg>
+<arg>${300}</arg>
+<arg>${1200}</arg>
+<arg>${500}</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20230207 10:24:30.646" endtime="20230207 10:24:31.449"/>
+</kw>
+<status status="PASS" starttime="20230207 10:24:30.646" endtime="20230207 10:24:31.449"/>
+</branch>
+<status status="PASS" starttime="20230207 10:24:30.645" endtime="20230207 10:24:31.449"/>
+</if>
+<status status="PASS" starttime="20230207 10:24:29.492" endtime="20230207 10:24:31.449"/>
+</iter>
+<iter>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${Current Day}</var>
+<arg>${Current Day Element}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20230207 10:24:32.485" level="INFO">Element '//hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[1]/android.widget.EditText' text is '29' </msg>
+<msg timestamp="20230207 10:24:32.485" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[1]/android.widget.EditText</msg>
+<msg timestamp="20230207 10:24:32.485" level="INFO">${Current Day} = 29</msg>
+<status status="PASS" starttime="20230207 10:24:31.449" endtime="20230207 10:24:32.486"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Current Day}&quot;==&quot;${Input Start Datetime.day}&quot;">
+<break>
+<status status="NOT RUN" starttime="20230207 10:24:32.486" endtime="20230207 10:24:32.486"/>
+</break>
+<status status="NOT RUN" starttime="20230207 10:24:32.486" endtime="20230207 10:24:32.487"/>
+</branch>
+<branch type="ELSE">
+<kw name="Swipe" library="AppiumLibrary">
+<arg>${300}</arg>
+<arg>${990}</arg>
+<arg>${300}</arg>
+<arg>${1200}</arg>
+<arg>${500}</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20230207 10:24:32.487" endtime="20230207 10:24:33.286"/>
+</kw>
+<status status="PASS" starttime="20230207 10:24:32.487" endtime="20230207 10:24:33.286"/>
+</branch>
+<status status="PASS" starttime="20230207 10:24:32.486" endtime="20230207 10:24:33.286"/>
+</if>
+<status status="PASS" starttime="20230207 10:24:31.449" endtime="20230207 10:24:33.286"/>
+</iter>
+<iter>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${Current Day}</var>
+<arg>${Current Day Element}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20230207 10:24:34.463" level="INFO">Element '//hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[1]/android.widget.EditText' text is '28' </msg>
+<msg timestamp="20230207 10:24:34.463" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[1]/android.widget.EditText</msg>
+<msg timestamp="20230207 10:24:34.463" level="INFO">${Current Day} = 28</msg>
+<status status="PASS" starttime="20230207 10:24:33.287" endtime="20230207 10:24:34.463"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Current Day}&quot;==&quot;${Input Start Datetime.day}&quot;">
+<break>
+<status status="NOT RUN" starttime="20230207 10:24:34.464" endtime="20230207 10:24:34.464"/>
+</break>
+<status status="NOT RUN" starttime="20230207 10:24:34.463" endtime="20230207 10:24:34.464"/>
+</branch>
+<branch type="ELSE">
+<kw name="Swipe" library="AppiumLibrary">
+<arg>${300}</arg>
+<arg>${990}</arg>
+<arg>${300}</arg>
+<arg>${1200}</arg>
+<arg>${500}</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="PASS" starttime="20230207 10:24:34.464" endtime="20230207 10:24:35.265"/>
+</kw>
+<status status="PASS" starttime="20230207 10:24:34.464" endtime="20230207 10:24:35.265"/>
+</branch>
+<status status="PASS" starttime="20230207 10:24:34.463" endtime="20230207 10:24:35.265"/>
+</if>
+<status status="PASS" starttime="20230207 10:24:33.287" endtime="20230207 10:24:35.265"/>
+</iter>
+<iter>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${Current Day}</var>
+<arg>${Current Day Element}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20230207 10:24:36.334" level="INFO">Element '//hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[1]/android.widget.EditText' text is '27' </msg>
+<msg timestamp="20230207 10:24:36.334" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.NumberPicker[1]/android.widget.EditText</msg>
+<msg timestamp="20230207 10:24:36.334" level="INFO">${Current Day} = 27</msg>
+<status status="PASS" starttime="20230207 10:24:35.266" endtime="20230207 10:24:36.334"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${Current Day}&quot;==&quot;${Input Start Datetime.day}&quot;">
+<break>
+<status status="PASS" starttime="20230207 10:24:36.335" endtime="20230207 10:24:36.335"/>
+</break>
+<status status="PASS" starttime="20230207 10:24:36.334" endtime="20230207 10:24:36.335"/>
+</branch>
+<branch type="ELSE">
+<kw name="Swipe" library="AppiumLibrary">
+<arg>${300}</arg>
+<arg>${990}</arg>
+<arg>${300}</arg>
+<arg>${1200}</arg>
+<arg>${500}</arg>
+<doc>Swipe from one point to another point, for an optional duration.</doc>
+<status status="NOT RUN" starttime="20230207 10:24:36.335" endtime="20230207 10:24:36.335"/>
+</kw>
+<status status="NOT RUN" starttime="20230207 10:24:36.335" endtime="20230207 10:24:36.335"/>
+</branch>
+<status status="PASS" starttime="20230207 10:24:36.334" endtime="20230207 10:24:36.335"/>
+</if>
+<status status="PASS" starttime="20230207 10:24:35.265" endtime="20230207 10:24:36.335"/>
+</iter>
+<status status="PASS" starttime="20230207 10:24:14.756" endtime="20230207 10:24:36.335"/>
+</while>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Accept Time}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230207 10:24:36.338" level="INFO">Clicking element '//hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.Button[2]'.</msg>
+<msg timestamp="20230207 10:24:36.417" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.ScrollView/android.widget.LinearLayout/android.widget.Button[2]</msg>
+<status status="PASS" starttime="20230207 10:24:36.335" endtime="20230207 10:24:36.417"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230207 10:24:38.417" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230207 10:24:36.417" endtime="20230207 10:24:38.418"/>
 </kw>
 <kw name="Get Text" library="AppiumLibrary">
-<var>${Num Docs}</var>
-<arg>${Num Docs Element}</arg>
+<var>${Picked Date}</var>
+<arg>${Start Datetime Field}</arg>
 <doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
-<msg timestamp="20230203 17:27:59.913" level="INFO">Element '//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView' text is '2 giấy tờ ' </msg>
-<msg timestamp="20230203 17:27:59.913" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.widget.TextView</msg>
-<msg timestamp="20230203 17:27:59.913" level="INFO">${Num Docs} = 2 giấy tờ </msg>
-<status status="PASS" starttime="20230203 17:27:29.462" endtime="20230203 17:27:59.913"/>
+<msg timestamp="20230207 10:24:38.556" level="INFO">Element '//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.EditText' text is '27-12-2022' </msg>
+<msg timestamp="20230207 10:24:38.556" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.EditText</msg>
+<msg timestamp="20230207 10:24:38.556" level="INFO">${Picked Date} = 27-12-2022</msg>
+<status status="PASS" starttime="20230207 10:24:38.418" endtime="20230207 10:24:38.556"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${Num Docs}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230203 17:27:59.914" endtime="20230203 17:27:59.914"/>
+<kw name="Should Not Be Equal" library="BuiltIn">
+<arg>${EMPTY}</arg>
+<arg>${Picked Date}</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="PASS" starttime="20230207 10:24:38.556" endtime="20230207 10:24:38.557"/>
 </kw>
-<kw name="Split String" library="String">
-<var>${Num Docs}</var>
-<arg>${Num Docs}</arg>
-<arg>${SPACE}</arg>
-<arg>0</arg>
-<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
-<msg timestamp="20230203 17:27:59.914" level="INFO">${Num Docs} = ['2 giấy tờ ']</msg>
-<status status="PASS" starttime="20230203 17:27:59.914" endtime="20230203 17:27:59.914"/>
+<kw name="Page Should Contain Element" library="AppiumLibrary">
+<arg>${Delete Start Time}</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<msg timestamp="20230207 10:24:38.676" level="INFO">Current page contains element '//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]/android.widget.TextView'.</msg>
+<msg timestamp="20230207 10:24:38.676" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230207 10:24:38.557" endtime="20230207 10:24:38.676"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${Num Docs}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20230203 17:27:59.914" endtime="20230203 17:27:59.915"/>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${Delete Start Time}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20230207 10:24:38.678" level="INFO">Clicking element '//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]/android.widget.TextView'.</msg>
+<msg timestamp="20230207 10:24:38.858" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.view.ViewGroup[1]/android.widget.TextView</msg>
+<status status="PASS" starttime="20230207 10:24:38.677" endtime="20230207 10:24:38.858"/>
 </kw>
-<status status="PASS" starttime="20230203 17:25:32.253" endtime="20230203 17:27:59.915"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230207 10:24:40.858" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230207 10:24:38.858" endtime="20230207 10:24:40.858"/>
+</kw>
+<kw name="Get Text" library="AppiumLibrary">
+<var>${Picked Date}</var>
+<arg>${Start Datetime Field}</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<msg timestamp="20230207 10:24:40.983" level="INFO">Element '//hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.EditText' text is '' </msg>
+<msg timestamp="20230207 10:24:40.983" level="INFO">xpath criteria: //hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup[2]/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[3]/android.widget.EditText</msg>
+<msg timestamp="20230207 10:24:40.984" level="INFO">${Picked Date} = </msg>
+<status status="PASS" starttime="20230207 10:24:40.859" endtime="20230207 10:24:40.984"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${EMPTY}</arg>
+<arg>${Picked Date}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20230207 10:24:40.984" endtime="20230207 10:24:40.985"/>
+</kw>
+<status status="PASS" starttime="20230207 10:23:46.251" endtime="20230207 10:24:40.985"/>
 </test>
-<status status="PASS" starttime="20230203 17:25:32.129" endtime="20230203 17:27:59.915"/>
+<status status="PASS" starttime="20230207 10:23:46.126" endtime="20230207 10:24:40.985"/>
 </suite>
 <statistics>
 <total>

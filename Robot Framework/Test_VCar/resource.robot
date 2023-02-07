@@ -1,13 +1,14 @@
 *** Settings ***
-Library  AppiumLibrary
+Library  AppiumLibrary  run_on_failure=No Operation
 Library  BuiltIn
 
 
 *** Variables ***
 ${ANDROID_AUTOMATION_NAME}    UIAutomator2
+${ANDROID_DEVICE_NAME}        4XORHMCMVW4XU44D
 ${ANDROID_APP}                ${CURDIR}/app/app-universal-release.apk
 ${ANDROID_PLATFORM_NAME}      Android
-${ANDROID_PLATFORM_VERSION}   %{ANDROID_PLATFORM_VERSION=11}
+${ANDROID_PLATFORM_VERSION}   %{ANDROID_PLATFORM_VERSION=12}
 ${ANDROID_APP_PACKAGE}        com.viettel.vcar
 ${ANDROID_APP_ACTIVITY}       com.connectedcar.MainActivity
 
@@ -32,9 +33,9 @@ ${Docs Management}              //hierarchy/android.widget.FrameLayout/android.w
 *** Keywords ***
 Open Android Test App
     Set Appium Timeout  10
-    Open Application  http://127.0.0.1:4723/wd/hub  automationName=${ANDROID_AUTOMATION_NAME}
-    ...  app=${ANDROID_APP}  platformName=${ANDROID_PLATFORM_NAME}  platformVersion=${ANDROID_PLATFORM_VERSION}
-    ...  appPackage=${ANDROID_APP_PACKAGE}  appActivity=${ANDROID_APP_ACTIVITY}     noReset=${True}
+    Open Application  http://127.0.0.1:4723/wd/hub  automationName=${ANDROID_AUTOMATION_NAME}       deviceName=${ANDROID_DEVICE_NAME}
+    ...  platformName=${ANDROID_PLATFORM_NAME}  platformVersion=${ANDROID_PLATFORM_VERSION}
+    ...  appPackage=${ANDROID_APP_PACKAGE}  appActivity=${ANDROID_APP_ACTIVITY}     noReset=${True}     fullReset=${False}      ignoreHiddenApiPolicyError=${True}
     Sleep               2
 
 

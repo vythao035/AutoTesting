@@ -20,6 +20,6 @@ Login Successful
     Input Username  ${USER}
     Input Password  ${PWD}
     Submit Credentials
-    Sleep   3
+    Sleep   5
     Page Should Contain Element     ${Menu Button}
 
