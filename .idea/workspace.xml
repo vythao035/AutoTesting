@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b349ee0f-7b04-41be-9025-155a2a222136" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ALGO/graph/ELEVTRBL.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ALGO/graph/flood_fill.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ALGO/graph/Detect_cycle.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ALGO/graph/Maze.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ALGO/graph/num_island.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/AutoTesting.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AutoTesting.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ALGO/graph/ELEVTRBL.py" beforeDir="false" afterPath="$PROJECT_DIR$/ALGO/graph/ELEVTRBL.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,14 +38,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/vtn-thaontv/workspace/2023/AutoTesting/Robot Framework/test_with_appiumlibrary&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/home/vtn-thaontv/workspace/2023/AutoTesting/Robot Framework/test_with_appiumlibrary",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Robot Framework/test_with_appiumlibrary" />
@@ -49,24 +60,25 @@
       <recent name="$PROJECT_DIR$/Robot Framework/test_xsign_web" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test-login.Login.test_fill_user_name">
-    <configuration name="test_api_login.robot" type="RobotRunConfiguration" factoryName="RobotRunConfiguration" temporary="true">
+  <component name="RunManager" selected="Python.ELEVTRBL">
+    <configuration name="ELEVTRBL" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="AutoTesting" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="/usr/bin/python3.10" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ALGO/graph" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="robot.run" />
-      <option name="PARAMETERS" value="--suite &quot;AutoTesting.Robot Framework.API testing.test_api_login.test_api_login&quot; ." />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ALGO/graph/ELEVTRBL.py" />
+      <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="true" />
-      <option name="MODULE_MODE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
       <method v="2" />
@@ -133,6 +145,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.ELEVTRBL" />
         <item itemvalue="Python tests.Python tests for test-login.Login.test_fill_user_name" />
         <item itemvalue="Python tests.Python tests for test-login.Login.test_UI_login_screen" />
         <item itemvalue="Python tests.Python tests for test-login.Login" />
@@ -164,5 +177,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/AutoTesting$ELEVTRBL.coverage" NAME="ELEVTRBL Coverage Results" MODIFIED="1692261186208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ALGO/graph" />
   </component>
 </project>
