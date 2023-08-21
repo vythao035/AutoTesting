@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b349ee0f-7b04-41be-9025-155a2a222136" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ALGO/graph/far_from_island.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ALGO/backtrack/subset_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ALGO/backtrack/subsets.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ALGO/backtrack/sum_2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
